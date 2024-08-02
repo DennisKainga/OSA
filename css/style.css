@@ -427,6 +427,10 @@
   min-height: 352px;
   transition: 0.5s;
 }
+.service-content p {
+  text-align: justify;
+  padding-right: 27px;
+}
 .service .service-content-inner:hover {
   position: relative;
   background: var(--bs-primary) !important;
