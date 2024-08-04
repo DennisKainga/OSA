@@ -457,22 +457,37 @@
   /* text-align: justify; */
   /* padding-right: 27px; */
 }
-.service .service-content-inner:hover {
+.service-content-inner:hover {
   position: relative;
   background: var(--bs-primary) !important;
+  box-shadow: inset 800px 0 0 0 var(--bs-light) !important;
+  color: var(--bs-primary) !important;
+  cursor: pointer;
 }
 
-.service .service-content-inner .service-content h5,
+.service-content-inner:hover .service-icon i {
+  color: var(--bs-primary) !important;
+}
+
+.service-content-inner:hover .service-content h5 {
+  color: var(--bs-primary) !important;
+}
+
+.service-content-inner:hover .service-content p {
+  font-weight: 600;
+}
+
+/* .service .service-content-inner .service-content h5,
 .service .service-content-inner .service-content p,
 .service .service-content-inner .service-icon i {
   transition: 0.5s;
-}
+} */
 
-.service .service-content-inner:hover .service-content h5,
+/* .service .service-content-inner:hover .service-content h5,
 .service .service-content-inner:hover .service-content p,
-.service .service-content-inner:hover .service-icon i {
-  color: var(--bs-white) !important;
-}
+.service .service-content-inner:hover .service-icon i:hover {
+  color: var(--bs-primary) !important;
+} */
 /*** Service End ***/
 
 /*** Destination Start ***/
