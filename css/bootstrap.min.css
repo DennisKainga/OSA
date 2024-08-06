@@ -8,7 +8,7 @@
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
-  --bs-pink: #d63384;
+  --bs-pink: #d23958;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
@@ -18,9 +18,11 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
+  --tw-bg-opacity: 1;
   /* --bs-primary: #d23958; */
-  --bs-primary: #d23958;
-  --bs-secondary: #e6051f;
+  --bs-primary: #ed3866;
+  /* --bs-primary: rgb(210 57 88 / var(--tw-bg-opacity)); */
+  --bs-secondary: #d23958;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -2603,7 +2605,7 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   color: #fff;
-  background-color: #d23958;
+  background-color: #ed3866;
   border-color: #d23958;
 }
 .btn-primary:hover {
