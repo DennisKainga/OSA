@@ -511,8 +511,10 @@ progress {
   content: "— ";
 }
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 655px;
 }
 .img-thumbnail {
   padding: 0.25rem;
@@ -551,6 +553,8 @@ progress {
   .container {
     max-width: 540px;
   }
+
+
 }
 @media (min-width: 768px) {
   .container-md,
@@ -1105,6 +1109,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+
 @media (min-width: 992px) {
   .col-lg {
     flex: 1 0 0%;
@@ -1160,6 +1165,7 @@ progress {
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
+    width: fit-content;
   }
   .col-lg-6 {
     flex: 0 0 auto;
@@ -3734,7 +3740,7 @@ fieldset:disabled .btn {
 .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  /* margin-left: 1rem; */
   font-size: 1.25rem;
   white-space: nowrap;
 }
@@ -3870,9 +3876,9 @@ fieldset:disabled .btn {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-lg .navbar-toggler {
+  /* .navbar-expand-lg .navbar-toggler {
     display: none;
-  }
+  } */
 }
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -5469,6 +5475,7 @@ fieldset:disabled .btn {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 100%;
 }
 .carousel-inner::after {
   display: block;
@@ -5527,21 +5534,22 @@ fieldset:disabled .btn {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 0; */
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 5%;
   padding: 0;
   color: #fff;
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: opacity 0.15s ease;
+  height: 100%;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
@@ -5574,7 +5582,7 @@ fieldset:disabled .btn {
   background-size: 100% 100%;
 }
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke-width=5 fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
@@ -5582,7 +5590,7 @@ fieldset:disabled .btn {
 .carousel-indicators {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 140px;
   left: 0;
   z-index: 2;
   display: flex;
@@ -5608,7 +5616,7 @@ fieldset:disabled .btn {
   border: 0;
   border-top: 10px solid rgba(0, 0, 0, 0);
   border-bottom: 10px solid rgba(0, 0, 0, 0);
-  opacity: 0.5;
+  opacity: 0.1;
   transition: opacity 0.6s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -5620,10 +5628,10 @@ fieldset:disabled .btn {
   opacity: 1;
 }
 .carousel-caption {
-  position: absolute;
+  /* position: absolute;
   right: 15%;
   bottom: 1.25rem;
-  left: 15%;
+  left: 15%; */
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   color: #fff;
@@ -8242,9 +8250,9 @@ fieldset:disabled .btn {
   .d-lg-inline-flex {
     display: inline-flex !important;
   }
-  .d-lg-none {
+  /* .d-lg-none {
     display: none !important;
-  }
+  } */
   .flex-lg-fill {
     flex: 1 1 auto !important;
   }
