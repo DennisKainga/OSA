@@ -485,12 +485,13 @@ nav{
 .fun-card{
     position: relative;
     /* background-color: var(--bs-red); */
-    width: fit-content;
-    max-width: calc(100% - 50px);
+    width: 100%;
     margin: auto;
-    padding: 20px 55px;
+    max-width: 1110px;
+    padding: 20px 10px;
     padding-top: 60px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
     gap: 35px;
     background-image: url("../img/langata/18.HEIC") ;
@@ -500,7 +501,7 @@ nav{
     .fc-left{
         position: relative;
         z-index: 2;
-        width: 450px;
+        /* width: 450px; */
         height: 400px;
         background-color: black;
     }
@@ -510,8 +511,10 @@ nav{
         z-index: 2;
         /* contain: inline-size; */
         display: flex;
-            flex-direction: column;
-            gap: 10px;
+        flex-direction: column;
+        gap: 10px;
+        /* width: 450px; */
+        text-wrap: wrap;
        
     }
     p, h2, h4{
@@ -641,6 +644,7 @@ nav{
         min-width: 100%;
         padding: 20px 0px;
         padding-top: 60px;
+        grid-template-columns: repeat(1, 1fr);
         margin: 0;
         .fc-left{
             width: 100%;
