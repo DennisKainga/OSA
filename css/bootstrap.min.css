@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --store-cards-width: 0px;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -50,7 +51,9 @@
     scroll-behavior: smooth;
   }
 }
+
 body {
+  position: relative;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
