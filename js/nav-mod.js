@@ -6,6 +6,7 @@ const handleResize = () => {
   const gap = 25;
   const cardWidth = 330;
   const packageContainer = document.querySelector(".store-cards-width-referer");
+  if (!packageContainer) return;
   const { width } = packageContainer.getBoundingClientRect();
   const maxNum = Math.trunc(width / cardWidth);
   const totalGap = (maxNum - 1) * gap;

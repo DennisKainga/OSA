@@ -1,0 +1,307 @@
+img{
+    width: 100%;
+}
+.about-start,
+.as-inner{
+    display: grid;
+    gap: 30px;
+    padding: 60px 100px;
+    margin: auto;
+    max-width: 1500px;
+}
+
+/* From Uiverse.io by ernestnash */ 
+.contact-button {
+    width: 150px;
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bs-red);
+    border: 2px solid var(--bs-red);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    border-radius: 100000px;
+   }
+
+   .contact-button:hover{
+    color: white;
+   }
+   
+   .contact-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-red);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+   }
+   
+   .contact-button:hover::before {
+    transform: translateX(0);
+   }
+
+.about-start{
+  
+    grid-template-columns: repeat(2, 1fr);
+    .start-left{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    h4{
+        color:var(--bs-gray);
+
+    }
+    h1{
+        font-size: 45px;
+    }
+
+    .start-right{
+        display: grid;
+        place-content: center;
+    }
+    img{
+        width: 400px;
+
+    }
+
+}
+.bg-container{
+    background-color: white;
+}
+
+.about-second{
+    width: 100%;
+    background-color: #fdf8fa;
+
+    .as-inner{
+
+        .second-top{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-bottom: 2px solid #ed386538;
+            padding: 40px 0px;
+            padding-bottom: 70px;
+        }
+        .second-bottom{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 0px;
+            padding-bottom: 70px;
+    
+        }
+        .second-bottom .sb-card{
+            flex: 1 1;
+            text-align: center;
+            min-width: 250px;
+        }
+    }
+}
+
+.about-third{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+
+    video{
+        max-width: 750px;
+        width: 100%;
+        height: 450px;
+        background-color: grey;
+        margin-top: -70px;
+        
+    }
+
+    .ts-bottom{
+        margin-top: 85px;
+        padding: 20px 40px;
+        box-shadow: 0px 2px 7px 4px rgba(0, 0, 0, 0.116);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        width: calc(100% - 20px);
+        max-width: 850px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .tsb-left{
+            max-width: 60%;
+            min-width: 350px;
+        }
+
+    }
+}
+
+.full-bleed-card-container{
+    max-width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 80px 10px;
+    /* height: 70vh; */
+    min-height: fit-content;
+    overflow: hidden;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* background-color: white; */
+    /* box-shadow: 0px 2px 7px 10px rgba(0, 0, 0, 0.116); */
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.card-wrapper{
+    display: grid;
+    place-content: center;
+}
+.card-container-fb {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+  }
+  
+  .card-fb {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  
+  .card-fb .front-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+  }
+  
+  .card-fb .front-content p {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 1;
+    background: linear-gradient(-45deg, var(--bs-red) 0%, var(--bs-dark) 100% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+  }
+  
+  .card-fb .content-fb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background: linear-gradient(-45deg, var(--bs-red)0%, var(--bs-dark) 100% );
+    color: #e8e8e8;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateX(-96%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .card-fb .content-fb.c-second{
+    transform: translateX(96%);
+  }
+  
+  .card-fb .content-fb .heading-fb {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .card-fb:hover .content-fb {
+    transform: translateY(0);
+  }
+  
+  .card-fb:hover .front-content {
+    transform: translateX(-30%);
+  }
+  .card-fb:hover .front-content.c-second {
+    transform: translateX(30%);
+  }
+  .card-fb:hover .front-content p {
+    opacity: 0;
+  }
+  
+
+.footer{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+@media (max-width:1220px) {
+
+    .about-start,
+    .about-second .as-inner .second-top{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width: 810px){
+    .about-start,
+    .as-inner{
+        padding: 60px 50px;
+    }
+}
+
+@media (max-width: 450px){
+    .about-start  {
+        h1{
+            font-size: 25px;
+        }
+        img{
+            width: 250px;
+        }
+    }
+
+    .about-start,
+    .as-inner{
+        padding: 30px 20px;
+    }
+
+    .full-bleed-card-container{
+        justify-content: center;
+    }
+
+    .about-third{
+        .ts-bottom{
+            .tsb-left{
+                min-width: 100%;
+            }
+        }
+    }
+    
+}
