@@ -1,7 +1,7 @@
 .Hero-pattern{
     background-image: url("../img/langata/11.HEIC");
     background-size: cover;
-    height: 70vh;
+    height: 80vh;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -16,7 +16,6 @@
         
     }
 }
-
 
 .bg-background{
     position: absolute;
