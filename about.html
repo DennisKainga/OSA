@@ -29,6 +29,10 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="css/nav-modification.css">
         <link rel="stylesheet" href="css/about.css">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            ScrollReveal({ reset: true });
+        </script>
     </head>
 
     <body>
@@ -103,8 +107,9 @@
         <!-- Navbar end -->
 
         <!-- Hero start -->
-        <div class="Hero-pattern">
-            <img src="img/hero-curve.png" alt="">
+        <div class="Hero-pattern animatable-img">
+            <div class="page-title"><span>ABOUT US</span></div>
+            <img  src="img/hero-curve.png" alt="">
         </div>
         <!-- Hero end  -->
 
@@ -113,13 +118,15 @@
         <section class="about-start about-section">
             
                 <div class="start-left">
-                    <p>ABOUT US</p>
+                    <p>OUR GOAL</p>
                     <h1>Helping businesses deliver exceptional buyer experiences.</h1>
                     <p>One Stop Arcade is the leading video messaging and asynchronous communications platform for go-to-market teams. Millions of sales professionals and more than 250,000 go-to-market teams use One Stop Arcade’s AI-powered video messaging, video hosting, and digital sales rooms to connect with more prospects and generate more revenue.</p>
                     <a class="contact-button" href="#">Contact us</a>
                 </div>
                 <div class="start-right">
-                    <img src="img/blob-img.png" alt="OSA-pic" srcset="">
+                    <div class="animatable-img">
+                        <img src="img/blob-img.png" alt="OSA-pic" srcset="">
+                    </div>
                 </div>
           
         </section>
@@ -131,7 +138,9 @@
             <div class="as-inner">
             <div class="second-top">
                 <div class="second-left">
-                    <img src="img/langata/12.HEIC" alt="" srcset="">
+                    <div class="animatable-img">
+                        <img  src="img/langata/12.HEIC" alt="" srcset="">
+                    </div>
                 </div>
                 <div class="second-right">
                     <p>We believe in the power of video to foster human connections and empower go-to-market professionals to deliver trusted and productive buyer experiences.</p>
@@ -140,15 +149,15 @@
                 </div>
             </div>
             <div class="second-bottom">
-                <div class="sb-card">
+                <div class="sb-card animatable-img">
                     <h1>300+</h1>
                     <p>Since 2010, One Stop Arcade has grown from a team of 2 to over 300.</p>
                 </div>
-                <div class="sb-card">
+                <div class="sb-card animatable-img">
                     <h1>12 million +</h1>
                     <p>Over 12 million people use Vidyard to create and share videos.</p>
                 </div>
-                <div class="sb-card">
+                <div class="sb-card animatable-img">
                     <h1>160,000</h1>
                     <p>160,000 companies choose Vidyard.</p>
                 </div>
@@ -160,7 +169,7 @@
         <!-- third section start -->
         <section class="about-third about-section">
             <!-- <video src=""></video> -->
-            <div class="ts-bottom">
+            <div class="ts-bottom animatable-img" id="ts-bottom">
                 <div class="tsb-left">
                     <h4>Curious about One Stop Arcade’s platform, pricing, and integrations?</h4>
                     <p>Watch the video to get answers and learn more about us.</p>
@@ -223,7 +232,7 @@
         <div class="container-fluid footer py-5">
             <div class="container py-5">
                 <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-lg-6 col-xl-3 animatable-img">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Get In Touch</h4>
                             <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
@@ -239,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-lg-6 col-xl-3 animatable-img">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Company</h4>
                             <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
@@ -250,7 +259,7 @@
                             <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-lg-6 col-xl-3 animatable-img">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white">Support</h4>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
@@ -262,7 +271,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
+                        <div class="footer-item animatable-img">
                             <div class="row gy-3 gx-2 mb-4">
                                 <div class="col-xl-6">
                                     <form>
@@ -341,6 +350,7 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
         <script src="js/nav-mod.js"></script>
+        <script src="js/about.js"></script>
     </body>
 
 </html>
