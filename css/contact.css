@@ -173,7 +173,11 @@
 }
 
 
-
+@media (max-width: 1240px){
+    .contact-inner{
+        padding: 40px;
+    }
+}
 
 @media (max-width: 1155px) {
 
