@@ -176,6 +176,12 @@
 
 
 @media (max-width: 1155px) {
+
+    .contact-container{
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+    }
     .contact-inner{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -221,12 +227,6 @@
         display: block;
         width: 100%;
         height: 250px;
-    }
-
-    .contact-container{
-        width: 100%;
-        border-radius: 0px;
-        box-shadow: none;
     }
 
     .contact-inner{
