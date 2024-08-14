@@ -445,7 +445,7 @@
 /*** Services Start ***/
 .services {
   background: linear-gradient(rgba(123, 19, 53, 0.3), rgba(123, 19, 53, 0.3)),
-    url(../img/langata/3.HEIC);
+    url(../img/langata/3.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1274,7 +1274,7 @@
 /*** Subscribe Start ***/
 .subscribe {
   background: linear-gradient(rgba(123, 19, 53, 0.3), rgba(123, 19, 53, 0.3)),
-    url(../img/langata/2.HEIC);
+    url(../img/langata/2.jpg);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;

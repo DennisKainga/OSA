@@ -1,5 +1,5 @@
 .Hero-pattern{
-    background-image: url("../img/langata/11.HEIC");
+    background-image: url("../img/langata/11.jpg");
     background-size: cover;
     height: 75vh;
     position: relative;
@@ -625,7 +625,7 @@ nav{
     grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
     gap: 35px;
-    background-image: url("../img/langata/18.HEIC") ;
+    background-image: url("../img/langata/18.jpg") ;
     background-size: contain;
   
 
