@@ -480,11 +480,15 @@
             inset: 0;
             border-right: var(--border-right) solid var(--animation-color);
             overflow: hidden;
-            transition: 0.5s;
+            transition: 1s;
+            transition-delay: .4s;
             -webkit-text-stroke: 1px var(--animation-color);
         }
         /* hover */
-        .fc-right-rich-text:hover .hover-text {
+        .fc-right-rich-text.animatable-img{
+            transform: translateY(0px);
+        }
+        .fc-right-rich-text.show .hover-text {
             width: 100%;
             filter: drop-shadow(0 0 23px var(--animation-color))
         }
