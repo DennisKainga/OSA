@@ -28,6 +28,11 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="css/modification.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+
+
     <body>
 
         <!-- Spinner Start -->
@@ -42,7 +47,7 @@
      
         <!-- Navbar & Hero Start -->
         
-        <div class="bg-background"></div>
+        <!-- <div class="bg-background"></div> -->
         <nav >
         <div class="nav-inner">
         <div id="navbar">
@@ -91,7 +96,8 @@
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="#!" class="nav-item nav-link">Shops To Let</a>
-                 <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="stores.html" class="nav-item nav-link">Stores</a>
             </div>
             <div class="collapable-socials"> 
                 <a class="btn btn-sm btn-outline-primary btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
@@ -104,7 +110,10 @@
         </div>
         </nav>
         
-        <div class="carousel-header">
+        <div class="carousel-header animatable-img double-door-animation">
+            <div class="pattern-container hero-curve">
+                <img class="" src="img/hero-curve.png" alt="" srcset="">
+            </div>
             <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
@@ -118,51 +127,51 @@
                      <div class="carousel-item active">
                         <img src="img/langata/3.jpg" class="img-fluid" alt="Image">
                         <div class="c-item-text">
-                            <p>SHOPPING ARCADE</p>
-                            <button class="c-item-text-btn">
-                                <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                               Explore
-                             </button>
+                            <!-- <p>SHOPPING ARCADE</p> -->
+                            <a href="stores.html" class="c-item-text-btn">
+                                    <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                                    Explore
+                             </a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="img/langata/12.jpg" class="img-fluid" alt="Image">
                         <div class="c-item-text">
                             <p></p>
-                            <button class="c-item-text-btn">
+                            <a href="stores.html" class="c-item-text-btn">
                                 <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                               Explore
-                             </button>
+                                Explore
+                            </a>
                         </div>
                     </div> 
                     <div class="carousel-item">
                         <img src="img/langata/11.jpg" class="img-fluid" alt="Image">
                         <div class="c-item-text">
-                            <p>ENTERTAINMENT</p>
-                            <button class="c-item-text-btn">
+                            <!-- <p>ENTERTAINMENT</p> -->
+                            <a href="stores.html" class="c-item-text-btn">
                                 <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                               Explore
-                             </button>
+                                Explore
+                            </a>
                         </div>
                     </div> 
                     <div class="carousel-item">
                         <img src="img/langata/14.jpg" class="img-fluid" alt="Image">
                         <div class="c-item-text">
-                            <p>WINE AND DINE</p>
-                            <button class="c-item-text-btn">
+                            <!-- <p>WINE AND DINE</p> -->
+                            <a href="stores.html" class="c-item-text-btn">
                                 <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                               Explore
-                             </button>
+                                Explore
+                            </a>
                         </div>
                     </div> 
                     <div class="carousel-item">
                         <img src="img/langata/16.jpg" class="img-fluid" alt="Image">
                         <div class="c-item-text">
                             <p></p>
-                            <button class="c-item-text-btn">
+                            <a href="stores.html" class="c-item-text-btn">
                                 <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                               Explore
-                             </button>
+                                Explore
+                            </a>
                         </div>
                     </div> 
                 </div>
@@ -176,42 +185,6 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>                    <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="carousel-navs">
-                <div class="carousel-navs-inner">
-                <div class="carousel-nav left">
-                    <a href="#" class="carousel-nav-link">
-                        <i class="fab fa-twitter fw-normal "></i>
-                       <span>STORES</span> 
-                    </a>
-                    <a href="#" class="carousel-nav-link">
-                        <i class="fab fa-instagram fw-normal"></i>
-                      <span>CENTER HOURS </span>  
-                    </a>
-                    <a href="#" class="carousel-nav-link">
-                        <i class="fab fa-facebook-f fw-normal"></i>
-                     <span>  EVENTS</span> 
-                    </a>
-                </div>
-                <div class="carousel-nav right">
-                    <a href="#" class="carousel-nav-link">
-                        <i class="fab fa-twitter fw-normal "></i>
-                       <span>CSR</span> 
-                    </a>
-                    <a href="#" class="carousel-nav-link">
-                        <i class="fab fa-instagram fw-normal"></i>
-                      <span>ENTERTAINMENT</span>  
-                    </a>
-                    <a href="#" class="carousel-nav-link">
-                        <i class="fab fa-facebook-f fw-normal"></i>
-                     <span>DEALS</span> 
-                    </a>
-                </div>
-            </div>
-                <div class="bottom-bars">
-                    <div class="bottom-bar-left"></div>
-                    <div class="bottom-bar-right"></div>
-                </div>
-            </div>
 
             </div>
             
@@ -219,156 +192,136 @@
         
         <!-- Navbar & Hero End -->
 
-        <div class="mx-auto text-center section-top" style="max-width: 900px;">
-            <!-- <img src="./img/logo.png" class="section-img px-3" /> -->
-            <p class=" section-title">Our stores</p>
-             
+        <!-- Hero break start -->
+        <div class="hero-break animatable-img">
+            <h1>One Stop Arcade® Stores</h1>
+            <p>With up to 100 stores, there's something for everyone at One Stop Arcade. From trendy fashion and food to cool tech and toys, MOA® has the retail therapy you’re looking for—and then some! If you need help finding anything, check out the directory or chat with us 24/7.</p>
+            
         </div>
-       <!-- Packages Start -->
-        <div class="container-fluid packages py-3">
-            <div class="container py-3 ">
-                <h1 class="stores-title">What's new</h1>
-                <div class="store-cards-width-referer">
-                <div class="store-cards">
-                    <div class="store-card">
+        <!-- Hero break end -->
+
+        <div class="c-btn-container">
+            <a class="contact-button" href="contact.html">Contact us</a>
+        </div>
+
+        <div class="light-bg">
+
+        <!-- Featured stores start -->
+        <div class="featured-cards-container">
+            <p>FEATURED STORES</p>
+                <div class="featured-cards">
+                    <div class="featured-card animatable-img">
                         <img src="./img/Stores/Scottsdale.png" alt="naivas" />
-                        <p>Scottsdale Bar & Restaurant</p>
                     </div>
-                    <div class="store-card">
+                    <div class="featured-card animatable-img">
                         <img src="./img/Stores/blackwood.png" alt="naivas" />
-                        <p>Blackwood Restaurant</p>
                     </div>
-                    <div class="store-card">
+                    <div class="featured-card animatable-img">
                         <img src="./img/Stores/Jambo green.jpg" alt="naivas" />
-                        <p>Jambo fresh GreenGrocers</p>
                     </div>
-                    <div class="store-card">
+                    <div class="featured-card animatable-img">
                         <img src="./img/Stores/Optica.webp" alt="naivas" />
-                        <p>Optica</p>
                     </div>
-                    <div class="store-card">
+                    <div class="featured-card animatable-img">
                         <img src="./img/Stores/Zokai.png" alt="naivas" />
-                        <p>Zokai Home and Lifestyle Store</p>
+                    </div>
+                    <div class="featured-card animatable-img">
+                        <img src="./img/Stores/naivas-logo.png" alt="naivas" />
                     </div>
                 </div>
+                <a href="stores.html" class="featured-cards-btn"><span>ALL STORES</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg> </a>
+                <div class="border-bottom"></div>
             </div>
-            </div>
+        <!-- Featured stores end -->
+
+      
+          
+          
+        <!-- Shopping and beyong start -->
+
+
+        <div class="shopping-beyond-container">
+            <p>SHOPPING + BEYOND</p>
+            <div class="splide animatable-img">
+                <div class="splide__track">
+                  <div class="splide__list beyond-cards">
+                    <div class="splide__slide beyond-card">
+                        <img src="./img/gallery-2.jpg" alt="" srcset="">
+                        <div class="beyond-card-text">TEXAS DE BRAZIL</div>
+                    </div>
+                    <div class="splide__slide beyond-card">
+                        <img src="./img/gallery-8.jpg" alt="" srcset="">
+                        <div class="beyond-card-text">BRIO ITALIAN GRILLE</div>
+                    </div>
+                    <div class="splide__slide beyond-card">
+                        <img src="./img/gallery-3.jpg" alt="" srcset="">
+                        <div class="beyond-card-text">CARLIFORNIA PIZZA KITCHEN</div>
+                    </div>
+                    <div class="splide__slide beyond-card">
+                        <img src="./img/gallery-1.jpg" alt="" srcset="">
+                        <div class="beyond-card-text">GONG CHA</div>
+                    </div>
+                    <div class="splide__slide beyond-card">
+                        <img src="./img/gallery-9.jpg" alt="" srcset="">
+                        <div class="beyond-card-text">NAIVAS</div>
+                    </div>
+                    <div class="splide__slide beyond-card">
+                        <img src="./img/gallery-11.jpg" alt="" srcset="">
+                        <div class="beyond-card-text">LC WAIKIKI</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="stores.html" class="featured-cards-btn"><span>ALL SHOPPING CENTERS</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg> </a>
+
         </div>
+
+        <!-- Shopping and beyong end -->
+        </div>
+
+
         <div class="container-fluid packages py-3 second">
+
             <div class="container py-3 ">
-                <h1 class="stores-title">Have fun with us</h1>
+                <!-- <h1 class="stores-title">What we offer</h1> -->
                 <div class="fun-card">
                     <div class="fc-bg"></div>
-                    <div class="fc-left">
-                        <!-- video goes here -->
+
+                    <div class="fun-card-inner">
+                    <div class="fc-left animatable-img">
+                        <img src="../img/langata/16.jpg" alt="" srcset="">
                     </div>
                     <div class="fc-right">
+                        <div class="fc-right-rich-text" data-text="Awesome">
+                            <span class="actual-text">&nbsp;ARCADE VENUES&nbsp;</span>
+                            <span aria-hidden="true" class="hover-text">&nbsp;ARCADE VENUES&nbsp;</span>
+                        </div>
                         <h4>live the adventure</h4>
-                        <h2>ARCADE VENUES</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus odit similique</p>
                         <p>020 7123 141</p>
                         <p>example@email.com</p>
-                        <button class="c-item-text-btn">
+                        <a href="stores.html" class="c-item-text-btn">
                             <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
                            Explore
-                         </button>
+                         </a>
                     </div>
                 </div>
-                <div class="store-cards-width-referer">
-                <div class="store-cards second">
-                    <div class="store-card">
-                        <a href="#">
-                            <img src="./img/destination-5.jpg" alt="naivas" />
-                            <p>The Mall</p>
-                        </a>
-                    </div>
-                    <div class="store-card">
-                        <a href="#">
-                            <img src="./img/destination-6.jpg" alt="naivas" />
-                            <p>Eat and Drink</p>
-                        </a>
-                    </div>
-                    <div class="store-card">
-                        <a href="#">
-                            <img src="./img/destination-7.jpg" alt="naivas" />
-                            <p>New Opening</p>
-                        </a>
-                    </div>
-                    <div class="store-card">
-                        <a href="#">
-                            <img src="./img/gallery-2.jpg" alt="naivas" />
-                            <p>Entertinment</p>
-                        </a>
-                    </div>
                 </div>
-            </div>
+           
             </div>
         </div>
-        <!-- Packages End -->
-         
-  <!-- Services Start -->
-        <div class="container-fluid bg-light service py-5 services">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h1 class="px-3 text-light">come in! We’re open!</h1>
-                    <h1 class="mb-0 text-light">Every day from 8am to 10pm</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-12 mx-auto" >
-                        <div class="row g-5">
-                            <!-- <div class="col-md-6 "   >
-                                <div   class="service-content-inner d-flex align-items-center bg-white bordder border-primarsy rounded p-4 pe-0">
-                                      <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-light"></i>
-                                    </div>
-                                    <div class="service-content mt-4">
-                                        <h5 class="text-light">People</h5>
-                                        <p class="" >Fair labour practices: Making sure that all employees, regardless of their race, gender, or other characteristics, are paid fairly, have safe working conditions, and are given equal opportunity.
-                                        </p>
-                                    </div>
-                                  
-                                </div>
-                            </div> -->
-                          
-                            <!-- <div class="col-md-6"  >
-                                <div class="service-content-inner  d-flex align-items-center bg-white bordder border-primawry rounded p-4 pe-0">
-                                     <div class="service-icon p-4">
-                                        <i class="fa fa-map-marker-alt fa-4x text-light"></i>
-                                    </div>
-                                    <div class="service-content mt-4">
-                                        <h5 class="text-light">Place</h5>
-                                        <p class="">Energy efficiency: Implementing energy-efficient lighting, HVAC systems, and appliances to reduce energy consumption and costs. Water conservation: Reducing water usage through the installation of low-flow fixtures and promoting water conservation practices. Sustainable transportation: Encouraging sustainable transportation options for employees and customers.
-                                        </p>
-                                    </div>
-                                   
-                                </div>
-                            </div> -->
-                                <!-- <div class="col-md-6 ">
-                                <div class="service-content-inner  d-flex align-items-center bg-white border border-primary rounded  p-4 pe-0" >
-                                     <div class="service-icon p-4">
-                                        <i class="fa fa-map-marker-alt fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content mt-4">
-                                        <h5 class="">Place</h5>
-                                        <p class="" >Sustainable sourcing: Sourcing products from environmentally responsible suppliers, such as those that use renewable resources, reduce waste, and have sustainable production practices. Waste reduction: Implementing a comprehensive recycling and composting program to reduce waste and divert it from landfills. Carbon footprint reduction: Implementing measures to reduce the carbon footprint of the retail property, such as using renewable energy sources, promoting energy-efficient practices, and reducing transportation emissions.
-                                        </p>
-                                    </div>
-                                   
-                                </div>
-                            </div> -->
-                            
-                        </div>
-                    </div>
-                  
-                    <div class="col-12">
-                        <!-- <div class="text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Read More</a>
-                        </div> -->
-                    </div>
-                </div>
+        <!-- <div class="extra-content"></div> -->
+    
+
+
+        
+        <!-- <div class="card">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+            <div class="card__content">
+              <p class="card__title">Card Title</p>
             </div>
-        </div>
-        <!-- Services End -->
+        </div> -->
+
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5">
@@ -462,6 +415,8 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
         <script src="js/mod.js"></script>
+        <script src="js/index.js"></script>
+
     </body>
 
 </html>

@@ -313,16 +313,6 @@ nav{
     display: flex;
     justify-content: center;
 }
-/* .side-nav-bg{
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.199);
-    top: 0;
-
-} */
 
 .collapable-socials{
     display: none;
@@ -335,384 +325,23 @@ nav{
 
 }
 
-.carousel-header{
-    height: 690px;
-    width: 100%;
-    /* background-color: #ed386560; */
-    border: 0px solid var(--bs-white);
-    border-bottom: 0px;
-    min-height: fit-content;
+.mandatory-hidden{
+    display: none;
 }
 
-.carousel-inner{
-    height: 440px;
-    height: 100%;
-    position: relative;
-    
-}
-
-.carousel-item{
-    height: 100%;
-    position: relative;
-}
-
-.c-item-text{
-    pointer-events: all;
-    position: absolute;
-    top: 70%;
-    opacity: 0;
-    right: 50%;
-    transform: translate(50%, -50%);
-    z-index: 90;
-    font-size: 36px;
-    font-weight: 500;
-    color: white;
-    letter-spacing: 1.5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* From Uiverse.io by vinodjangid07 */ 
-.c-item-text-btn {
-    width: 110px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    background-color: white;
-    border-radius: 30px;
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    transition-duration: .2s;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
-    padding: 0px 12px;
-    transition-duration: .5s;
-    font-size: 14px;
-    opacity: 0.8;
-  }
-  
-  .c-item-text-btn .svgIcon {
-    height: 25px;
-    transition-duration: 1.5s;
-    fill: grey;
-  }
-  
-  .c-item-text-btn .bell path {
-    fill: rgb(19, 19, 19);
-  }
-  
-  .c-item-text-btn:hover {
-    background-color: white;
-    transition-duration: .5s;
-    opacity: 1;
-  }
-
-  .c-item-text-btn:hover .svgIcon{
-    fill: var(--bs-red);
-  }
-  
-  .c-item-text-btn:active {
-    transform: scale(0.97);
-    transition-duration: .2s;
-  }
-  
-  .c-item-text-btn:hover .svgIcon {
-    transform: rotate(250deg);
-    transition-duration: 1.5s;
-  }
-  
-  
-.carousel-item.active .c-item-text{
-   
-    animation: slide-up 1.5s ease 500ms forwards;
-
-
-}
-.carousel-item img{
-    width: 100%;
-}
-.c-light-bg{
-    position: absolute;
-    width: 100%;
-    height: 570px;
-    background-color: var(--bs-gray);
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.2;
- 
-
-}
-.carousel-actions{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 530px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-.material-symbols-outlined svg{
-    height: 37px;
-    width: 37px;
-}
-
-
-.carousel-navs{
-    position: absolute;
-    bottom: 0;
-    height: 140px;
-    /* background-color: var(--bs-pink); */
-    width: 100% ;
-
-}
-
-.carousel-navs-inner{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: var(--bs-red);
-   
-    
-}
-.carousel-nav{
-    flex: 1 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.carousel-nav-link{
-    color: var(--bs-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 30px;
-}
-.carousel-nav-link i{
-    border: 1px solid var(--bs-white);
-    padding: 8px;
-    border-radius: 50%;
-    color: var(--bs-white);
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-content: center;
-}
-.bottom-bars{
-    display: flex;
-    width: 100%;
-    height: 40px;
-}
-
-.bottom-bar-left,
-.bottom-bar-right{
-    background-color: var(--bs-red);
-    height: 100%;
-    flex: 1 1;
-}
-
-.bottom-bar-left{
-    border-radius: 0px 0px 50px 0px;
-}
-
-.bottom-bar-right{
-    border-radius: 0px 0px 0px 50px;
-}
-
-.section-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 0px;
-}
-
-.section-img{
-    scale: 0.5;
-    width: 120px;
-    height: 90px;
-    /* display: none; */
-}
-
-.container-fluid.packages{
-    background-color: white;
-    box-shadow: 0px 0px 6px 6px rgba(20, 20, 20, 0.267);
-}
-
-.container-fluid.packages.second{
-    box-shadow: 0px 0px 0px 0px rgba(20, 20, 20, 0.267);
-}
-
-.stores-title{
-    width: var(--store-cards-width);
-    margin: auto;
-    padding: 20px 0px;
-    padding-bottom: 40px;
-    color: var(--bs-primary);
-    position: relative;
-    /* display: none; */
-}
-
-.stores-title::after{
-    content: '';
-    left: 0;
-    bottom: 30px;
-    width: calc(var(--store-cards-width) - 400px);
-    min-width: 250px;
-    height: 2px;
-    background-color: var(--bs-primary);
-    margin: auto;
-    position: absolute;
-}
-
-.store-cards{
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    /* background-color: red; */
-    max-width: 1100px;
-    width: var(--store-cards-width);
-    margin: auto;
-    margin-top: 20px;
-
-}
-
-.store-card{
-    min-width: 330px;
-    max-width: 330px;
-    height: fit-content;
-    min-height: 580px;
-    /* background-color: blue; */
-    text-align: center;
-    border: 1px solid var(--bs-red);
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.store-card img{
-    width: 100%;
-    height: 470px;
-    object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.store-card p{
-    padding: 15px 20px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 20px;
-    color: rgb(63, 63, 63);
-}
-
-.fun-card{
-    position: relative;
-    /* background-color: var(--bs-red); */
-    width: 100%;
-    margin: auto;
-    max-width: 1110px;
-    padding: 20px 10px;
-    padding-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    flex-wrap: wrap;
-    gap: 35px;
-    background-image: url("../img/langata/18.jpg") ;
-    background-size: contain;
-  
-
-    .fc-left{
-        position: relative;
-        z-index: 2;
-        /* width: 450px; */
-        height: 400px;
-        background-color: black;
+@keyframes slide-up {
+    0%{
+        top: 70%;
+        opacity: 0;
     }
-
-    .fc-right{
-        position: relative;
-        z-index: 2;
-        /* contain: inline-size; */
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        /* width: 450px; */
-        text-wrap: wrap;
-       
-    }
-    p, h2, h4{
-        color: var(--bs-white);
-       
-    }
-    p{
-        font-size: 15px;
-    }
-    button{
+    100%{
+        top: 60%;
         opacity: 1;
-        color: var(--bs-gray);
     }
     
 }
 
-.fc-bg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-color: var(--bs-red);
-    opacity: 0.9;
-}
 
-.store-cards.second {
-    width: 100%;
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 30px;
-    .store-card{
-        
-        min-height: 0;
-        max-height: fit-content;
-        min-width: 0;
-        max-width: 100%;
-        background-color: var(--bs-red);
-       
-
-    }
-    .store-card p{
-        color: var(--bs-white);
-        font-weight: 400;
-    }
-    img{
-        max-height: 280px;
-        
-    } 
-}
-
-.container-fluid.bg-light.service{
-    background-color: white;
-    padding-top: 40px;
-    height: 500px;
-    display: flex;
-    align-items: center;
-
-    .text-light{
-        text-transform: uppercase;
-
-    }
-
-
-}
 @media(max-width: 1040px){
     .carousel-nav-link span{
         font-size: 14px;
@@ -734,6 +363,17 @@ nav{
 }
 
 @media(max-width: 810px){
+    @keyframes slide-up {
+        0%{
+            top: 70%;
+            opacity: 0;
+        }
+        100%{
+            top: 50%;
+            opacity: 1;
+        }
+        
+    }
     .Hero-pattern{
         /* background-image: none; */
         height:60vh;
@@ -753,22 +393,19 @@ nav{
         height: 120px;
     }
     .carousel-header{
-        height: 680px;
+        height: fit-content;
     }
     .img-fluid,
     .carousel-inner,
     .carousel-actions,
     .c-light-bg{
-        height: 400px;
+        height: 500px;
     }
     .c-item-text{
         font-size: 22px;
     }
     #navbar .burger{
         width: fit-content;
-    }
-    .carousel-indicators{
-        bottom: 280px;
     }
     .carousel-navs-inner{
         flex-direction: column;
@@ -779,7 +416,7 @@ nav{
         position: static;
     }
 
-    .fun-card{
+    .fun-card-inner{
         min-width: 100%;
         padding: 20px 0px;
         padding-top: 60px;
@@ -787,6 +424,9 @@ nav{
         margin: 0;
         .fc-left{
             width: 100%;
+            height: 100%;
+
+            
         }
         .fc-right{
             /* contain: inline-size; */
@@ -799,6 +439,8 @@ nav{
     }
    
 }
+
+
 
 @media(max-width: 650px){
     .Hero-pattern{
@@ -840,8 +482,10 @@ nav{
     }
 
     .c-item-text{
-        font-size: 17px;
+        font-size: 15px;
     }
+
+    
 
 
 
@@ -872,14 +516,3 @@ nav{
 
 }
 
-@keyframes slide-up {
-    0%{
-        top: 70%;
-        opacity: 0;
-    }
-    100%{
-        top: 60%;
-        opacity: 1;
-    }
-    
-}
