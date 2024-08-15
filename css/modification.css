@@ -315,9 +315,14 @@ nav{
     justify-content: center;
 }
 
+.navbar-links a{
+    white-space: nowrap;
+}
+
 .collapable-socials{
     display: none;
     justify-content: center;
+
     
 }
 .side-nav-bg.show{
@@ -499,6 +504,20 @@ nav{
         li[data-bs-target]{
             background-color: var(--bs-gray-dark);
         }
+
+    }
+
+    .collapsable-nav.show{
+        height: 269px;
+    }
+
+    .navbar-links{
+        flex-direction: column;
+        /* background-color: var(--bs-white); */
+    }
+
+    .collapable-socials{
+        padding-bottom: 10px;
 
     }
 

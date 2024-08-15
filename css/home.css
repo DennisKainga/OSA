@@ -845,9 +845,6 @@
     .collapable-socials{
         display: flex;
     }
-    .collapsable-nav.show{
-        height: 120px;
-    }
     .carousel-header{
         height: fit-content;
     }
@@ -992,6 +989,7 @@
     .c-light-bg{
         height: fit-content;
     }
+
 
     
 
