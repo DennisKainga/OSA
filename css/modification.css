@@ -59,7 +59,7 @@
 .animatable-img{
     opacity: 0;
     transform: translateY(70px);
-    transition: opacity 800ms ease, transform 800ms ease;
+    transition: opacity 400ms ease, transform 400ms ease;
     position: relative;
 }
 
@@ -484,6 +484,22 @@ nav{
 
     .c-item-text{
         font-size: 15px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev{
+        display: none;
+    }
+
+    .carousel-indicators{
+        bottom: 0;
+        /* background-color: red; */
+        z-index: 10;
+
+        li[data-bs-target]{
+            background-color: var(--bs-gray-dark);
+        }
+
     }
 
     
