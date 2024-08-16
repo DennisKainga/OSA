@@ -152,7 +152,7 @@
     max-width: 670px;
     margin: auto;
     width: 100%;
-    padding: 60px 20px;
+    padding: 30px 20px;
     padding-top: 40px;
     h1{
         font-size: 50px;
@@ -166,52 +166,52 @@
 
 }
 
-    /* From Uiverse.io by ernestnash */ 
+/* From Uiverse.io by ernestnash */ 
 
-    .c-btn-container{
-        width: 100%;
-        display: grid;
-        place-content: center;
-        .contact-button {
-            width: 150px;
-            display: inline-block;
-            padding: 0.5rem 1.8rem;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--bs-red);
-            border: 1px solid var(--bs-red);
-            cursor: pointer;
-            position: relative;
-            background-color: transparent;
-            text-decoration: none;
-            overflow: hidden;
-            z-index: 1;
-            font-family: inherit;
-            border-radius: 100000px;
-            margin: auto;
-           }
+.c-btn-container{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    .contact-button {
+        width: 150px;
+        display: inline-block;
+        padding: 0.5rem 1.8rem;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--bs-red);
+        border: 1px solid var(--bs-red);
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        text-decoration: none;
+        overflow: hidden;
+        z-index: 1;
+        font-family: inherit;
+        border-radius: 100000px;
+        margin: auto;
+        }
+    
+        .contact-button:hover{
+        color: white;
+        }
         
-           .contact-button:hover{
-            color: white;
-           }
-           
-           .contact-button::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--bs-red);
-            transform: translateX(-100%);
-            transition: all .3s;
-            z-index: -1;
-           }
-           
-           .contact-button:hover::before {
-            transform: translateX(0);
-           }
-    }
+        .contact-button::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bs-red);
+        transform: translateX(-100%);
+        transition: all .3s;
+        z-index: -1;
+        }
+        
+        .contact-button:hover::before {
+        transform: translateX(0);
+        }
+}
 
 .light-bg{
     background-color: #ffa8cf0e;
@@ -237,9 +237,8 @@
 
 
     .featured-cards{
-        cursor: pointer;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 25px;
         width: 100%;
         max-width: 1200px;
@@ -268,10 +267,10 @@
     
         
         .featured-card{
+            cursor: pointer;
             aspect-ratio: 1;
             flex:  1 1;
-            max-width: 200px;
-            max-height: 200px;
+            
             overflow: hidden;
             border-radius: 12px;
             border: 1px solid var(--bs-gray-dark);
@@ -429,7 +428,7 @@
 .fun-card{
     position: relative;
     width: 100%;
-    padding: 80px 0px;
+    padding: 60px 0px;
 }
 
 .fun-card-inner{
@@ -798,8 +797,11 @@
 
     .featured-cards-container{
         .featured-cards{
+            display: grid;
             width: fit-content;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+
+           
             
         }
     }
@@ -994,6 +996,24 @@
     
 
 
+
+}
+
+@media(max-width: 376px){
+
+    
+    .featured-cards-container{
+        .featured-cards{
+            width: fit-content;
+            grid-template-columns: repeat(1, 1fr);
+
+            .featured-card{
+                transition-delay: 0s;
+            }
+            
+        }
+    }
+    
 
 }
 

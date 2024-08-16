@@ -158,10 +158,18 @@ nav{
 
 }
 
+#navbar .burger-outer{
+    width: 250px;
+    pointer-events: none;
+}
+
 
 #navbar .burger{
-    width: 280px;
+    cursor: pointer;
+    width: fit-content;
+    pointer-events: all;
 }
+
 
 #navbar .burger span{
     color: var(--bs-red);
@@ -172,6 +180,7 @@ nav{
 /* Burger animation*/
 /* From Uiverse.io by JulanDeAlb */ 
 .hamburger {
+    pointer-events: none;
     cursor: pointer;
   }
   
@@ -180,6 +189,7 @@ nav{
   }
   
   .hamburger svg {
+    pointer-events: none;
     /* The size of the SVG defines the overall size */
     height: 3em;
     /* Define the transition for transforming the SVG */
@@ -201,11 +211,11 @@ nav{
     stroke-dasharray: 12 63;
   }
   
-  .hamburger input:checked + svg {
+  .burger.show  svg {
     transform: rotate(-45deg);
   }
   
-  .hamburger input:checked + svg .line-top-bottom {
+  .burger.show  svg .line-top-bottom {
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
   }

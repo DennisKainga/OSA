@@ -6,6 +6,7 @@ let options = {
 
 const toggleNav = () => {
   document.querySelector(".collapsable-nav").classList.toggle("show");
+  document.querySelector(".burger").classList.toggle("show");
 };
 
 const handleResize = () => {
@@ -21,7 +22,7 @@ const handleResize = () => {
 };
 
 const setUpEventListeners = () => {
-  const burger = document.querySelector(".hamburger-svg");
+  const burger = document.querySelector(".burger");
   handleResize();
   burger.addEventListener("click", toggleNav);
   window.addEventListener("resize", handleResize);

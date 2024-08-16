@@ -28,6 +28,8 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="css/modification.css">
+        <link rel="stylesheet" href="css/store.css">
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     </head>
 
     <body>
@@ -49,18 +51,23 @@
         <nav >
         <div class="nav-inner">
         <div id="navbar">
-            <div class="burger">
-                <label class="hamburger">
-                    <input type="checkbox" autocomplete="off">
-                    <svg viewBox="0 0 32 32" class="hamburger-svg">
-                      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                      <path class="line" d="M7 16 27 16"></path>
-                    </svg>
-                  </label>
-                  <span>MENU</span>
+            <div class="burger-outer">
+                <div class="burger">
+                    <label class="hamburger">
+                        <input type="checkbox" autocomplete="off">
+                        <svg viewBox="0 0 32 32" class="hamburger-svg">
+                        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                        <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                    </label>
+                    <span>MENU</span>
+                </div>
             </div>
+
             <div class="brand-logo">
-                <img  src="img/OSA_white.jpeg" alt="" srcset="">
+                <a href="index.html">
+                    <img  src="img/OSA_white.jpeg" alt="" srcset="">
+                </a>
             </div>
 
             <div class="socials">
@@ -109,6 +116,120 @@
         </nav>
 
 
+        <div class="page-content">
+            <div class="page-title">
+                <span>STORES</span>
+                <div class="underline"></div>
+            </div>  
+
+
+            <div class="upper-filter-bar">
+                <div class="filter-container">
+                    <button class="filter-button">
+                        <span class="current-filter">FILTER BY CATEGORY</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <div class="filter-items">
+                        <span class="filter-item">All</span>
+                        <span class="filter-item">Grocery</span>
+                        <span class="filter-item">Electronics</span>
+                        <span class="filter-item">Clothing</span>
+                        <span class="filter-item">Kitchen</span>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input placeholder="SEARCH FOR STORES" type="text" name="search" id="input-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                </div>
+            </div>
+
+            <div class="lower-filter-bar"> 
+                <button class="filter-chip active"><span> ALL</span></button>
+                <button class="filter-chip"><span>A - D</span></button>
+                <button class="filter-chip"><span>E - H</span></button>
+                <button class="filter-chip"><span>I - L</span></button>
+                <button class="filter-chip"><span>M - P</span></button>
+                <button class="filter-chip"><span>Q - T</span></button>
+                <button class="filter-chip"><span>U - X</span></button>
+                <button class="filter-chip"><span>Y - Z</span></button>
+            </div>
+
+            <div class="store-container"></div>
+        </div>
+
+         <!-- Footer Start -->
+         <div class="container-fluid footer py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> Karen, Nairobi, Kenya</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@onestoparcade.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +254710135765</a>
+                            <a href="" class="mb-3"><i class="fab fa-whatsapp me-2"></i> +254710135765</a>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Company</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                        </div>
+                    </div> -->
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Useful Links</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Shops To Let</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-4">
+                        <div class="footer-item">
+                            <div class="row gy-3 gx-2 mb-4">
+                                <div class="col-xl-12">
+                                  <!-- <img src="img/logo.png" alt=""> -->
+                                </div>
+                              
+                                <h1 class="text-white mb-3">"Where quality meets convenience."</h1>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright text-body py-4" style="display: none;">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-start">
+                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
@@ -126,7 +247,7 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
         <script src="js/mod.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/store.js"></script>
     </body>
 
 </html>
