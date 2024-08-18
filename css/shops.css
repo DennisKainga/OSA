@@ -399,12 +399,17 @@
 @media (max-width: 810px) {
 
     .page-content{
+
+
+        
         .breadcrumb-nav{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            align-self: center;
     
             .refinement{
                 max-width: 150px;
+                margin: auto;
             }
         }
     }
@@ -433,6 +438,10 @@
     p{
 
         font-size: 30px;
+    }
+
+    span{
+        max-width: 260px;
     }
 }
 

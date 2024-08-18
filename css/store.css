@@ -119,6 +119,7 @@
     }
 
     .input-container{
+        height: fit-content;
         width: 260px;
         display: flex;
         justify-content: space-between;
@@ -205,6 +206,20 @@
 }
 
 @media (max-width: 810px){
+
+    .page-content{
+        .filter-container{
+            min-width: 0;
+            max-width: 250px;
+            /* margin: auto; */
+
+    
+            .filter-btn-container{
+                flex-direction: column;
+            }
+
+        }
+    }
 
     .store-container{
         .store-card{
