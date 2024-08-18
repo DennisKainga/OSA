@@ -240,7 +240,7 @@ const setUpStore = (arr) => {
     const btnContainer = document.createElement("div");
     btnContainer.className = "btn-container";
     const anchor = document.createElement("a");
-    anchor.href = "Contact.html";
+    anchor.href = "contact.html";
     anchor.textContent = "Contact us";
 
     btnContainer.append(anchor);
