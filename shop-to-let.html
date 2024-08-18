@@ -28,13 +28,11 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="css/modification.css">
-        <link rel="stylesheet" href="css/store.css">
+        <link rel="stylesheet" href="css/shops.css">
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    </head>
 
     <body>
 
-        
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -43,11 +41,8 @@
         </div>
         <!-- Spinner End -->
 
-        <!-- Topbar Start -->
      
         <!-- Navbar & Hero Start -->
-        
-        <!-- <div class="bg-background"></div> -->
         <nav >
         <div class="nav-inner">
         <div id="navbar">
@@ -62,8 +57,7 @@
                     </label>
                     <span>MENU</span>
                 </div>
-            </div>
-
+            </div>  
             <div class="brand-logo">
                 <a href="index.html">
                     <img  src="img/OSA_white.jpeg" alt="" srcset="">
@@ -90,7 +84,7 @@
                             d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
                             transform="translate(30)"
                         ></path>
-                        </svg>
+                        </svg> 
                     </a>
                   </button>
                   
@@ -114,57 +108,90 @@
         </div>
         </div>
         </nav>
+        <!-- Navbar & Hero Start -->
 
-
-        <div class="page-content">
-            <div class="page-title">
-                <span>STORES</span>
-                <div class="underline"></div>
-            </div>  
-
-
-            <div class="upper-filter-bar">
-                <div class="filter-container">
-                    <div class="filter-btn-container">
-                        <button class="filter-button">
-                            <span class="current-filter">FILTER BY CATEGORY</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                        </button>
-                        <button class="filter-button">
-                            <span class="current-filter">FILTER BY LOCATION</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                        </button>
-                    </div>
-                    <div class="filter-items">
-                        <span class="filter-item">All</span>
-                        <span class="filter-item">Grocery</span>
-                        <span class="filter-item">Electronics</span>
-                        <span class="filter-item">Clothing</span>
-                        <span class="filter-item">Kitchen</span>
-                    </div>
-                </div>
-                <div class="input-container">
-                    <input placeholder="SEARCH FOR STORES" type="text" name="search" id="input-search">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                </div>
-            </div>
-
-            <div class="lower-filter-bar"> 
-                <button class="filter-chip active"><span> ALL</span></button>
-                <button class="filter-chip"><span>A - D</span></button>
-                <button class="filter-chip"><span>E - H</span></button>
-                <button class="filter-chip"><span>I - L</span></button>
-                <button class="filter-chip"><span>M - P</span></button>
-                <button class="filter-chip"><span>Q - T</span></button>
-                <button class="filter-chip"><span>U - X</span></button>
-                <button class="filter-chip"><span>Y - Z</span></button>
-            </div>
-
-            <div class="store-container"></div>
+        <!-- page content start -->
+        <div class="page-title">
+            <p>Stores that suit you</p>
+            <span ></span>
+            
         </div>
+        <div class="page-content">
 
-         <!-- Footer Start -->
-         <div class="container-fluid footer py-5">
+            <div class="breadcrumb-nav">
+                <div class="refinement">
+                    <div class="label">
+                       <span class="label-branch">Branch</span> 
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </div>
+                    <div class="collapsable">
+                        <button class="filter-chip branch active" filter-value="All" filter-type="Branch">All</button>
+                        <button class="filter-chip branch" filter-value="OSA lang'ata road" filter-type="Branch">OSA Lang'ata</button>
+                        <button class="filter-chip branch" filter-value="OSA Karen road" filter-type="Branch">OSA Karen</button>
+                        <a class="filter-chip branch" href="coming-soon.html" target="_blank" class="filter-chip-diff">OSA Rosslyn</a>
+                    </div>
+                </div>
+                <div class="refinement">
+                    <div class="label">    
+                       <span class="label-floor">Floor</span> 
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </div>                    
+                    <div class="collapsable">
+                        <button filter-type="Floor" filter-value="All" class="filter-chip floor active">All</button>
+                        <button filter-type="Floor" filter-value="0" class="filter-chip floor">0</button>
+                        <button filter-type="Floor" filter-value="1" class="filter-chip floor">1</button>
+                        <button filter-type="Floor" filter-value="2" class="filter-chip floor">2</button>
+                        <button filter-type="Floor" filter-value="3" class="filter-chip floor">3</button>
+                    </div>  
+                </div>
+                <div class="refinement">
+                    <div class="label">  
+                       <span class="label-size">Size</span> 
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </div>                    
+                    <div class="collapsable">
+                        <button filter-type="Size" filter-value="All" class="filter-chip size active">All</button>
+                        <button filter-type="Size" filter-value="100" class="filter-chip size">Up to 100</button>
+                        <button filter-type="Size" filter-value="500" class="filter-chip size">Up to 500</button>
+                        <button filter-type="Size" filter-value="1000" class="filter-chip size">Up to 1000</button>
+                        <button filter-type="Size" filter-value="1500" class="filter-chip size">Up to 1500</button>
+                        <button filter-type="Size" filter-value="2000" class="filter-chip size">Up to 2000</button>
+                        <button filter-type="Size" filter-value="Above" class="filter-chip size">2000 +</button>
+                    </div>
+                </div>
+                <div class="refinement">
+                    <div class="label">  
+                       <span class="label-rent">Rent</span> 
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </div>                    
+                    <div class="collapsable">
+                        <button filter-type="Rent" filter-value="All" class="filter-chip rent active">All</button>
+                        <button filter-type="Rent" filter-value="30000" class="filter-chip rent">Up to 30,000</button>
+                        <button filter-type="Rent" filter-value="50000" class="filter-chip rent">Up to 50,000</button>
+                        <button filter-type="Rent" filter-value="70000" class="filter-chip rent">Up to 70,000</button>
+                        <button filter-type="Rent" filter-value="100000" class="filter-chip rent">Up to 100,000</button>
+                        <button filter-type="Rent" filter-value="500000" class="filter-chip rent">Up to 500,000</button>
+                        <button filter-type="Rent" filter-value="Above" class="filter-chip rent">500,000 + </button>
+                    </div>
+                </div>
+            </div>
+            <div class="filtered-content-container">
+                <div class="filtered-content">
+                    
+                </div> 
+
+            </div>
+        </div>
+    
+        <!-- page content end -->
+
+        
+
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-4">
@@ -228,6 +255,9 @@
                         <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-start">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
                         Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
                     </div>
                     </div>
@@ -236,11 +266,10 @@
         </div>
         <!-- Copyright End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-
+        
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -253,7 +282,8 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
         <script src="js/mod.js"></script>
-        <script src="js/store.js"></script>
+        <script src="js/shops.js"></script>
+
     </body>
 
 </html>

@@ -36,9 +36,14 @@
 
     .filter-container{
         position: relative;
-        min-width: 200px;
-        max-width: 250px;
+        min-width: 450px;
+        max-width: 450px;
         width: fit-content;
+
+        .filter-btn-container{
+            display: flex;
+            gap: 15px;
+        }
 
         button{
             width: 100%;
@@ -79,6 +84,7 @@
             top: 115%;
             z-index: 10;
             width: 100%;
+            max-width: 250px;
             height: fit-content;
             max-height: 250px;
             overflow-y: scroll;
@@ -229,6 +235,18 @@
             .underline{
                 margin-top: -5px;
             }
+        }
+
+        .filter-container{
+            min-width: 0;
+            max-width: 250px;
+            margin: auto;
+
+    
+            .filter-btn-container{
+                flex-direction: column;
+            }
+
         }
     }
     .store-container{

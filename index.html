@@ -99,7 +99,7 @@
             <div class="navbar-links">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="#!" class="nav-item nav-link">Shops To Let</a>
+                <a href="shop-to-let.html" class="nav-item nav-link">Shops To Let</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                 <a href="stores.html" class="nav-item nav-link">Stores</a>
             </div>
@@ -246,7 +246,7 @@
 
         <div class="shopping-beyond-container">
             <p>SHOPPING + BEYOND</p>
-            <div class="splide animatable-img">
+            <div class="splide animatable-img" id="primary">
                 <div class="splide__track">
                   <div class="splide__list beyond-cards">
                     <div class="splide__slide beyond-card">
@@ -285,35 +285,100 @@
 
 
         <!-- More info start -->
-        <div class="container-fluid packages py-3 second">
-
-            <div class="container py-3 ">
-                <!-- <h1 class="stores-title">What we offer</h1> -->
-                <div class="fun-card">
-                    <div class="fc-bg"></div>
-
-                    <div class="fun-card-inner">
-                    <div class="fc-left animatable-img">
-                        <img src="./img/langata/16.jpg" alt="" srcset="">
-                    </div>
-                    <div class="fc-right">
-                        <div class="fc-right-rich-text animatable-img" data-text="Awesome">
-                            <span class="actual-text">&nbsp;ARCADE VENUES&nbsp;</span>
-                            <span aria-hidden="true" class="hover-text">&nbsp;ARCADE VENUES&nbsp;</span>
-                        </div>
-                        <h4>live the adventure</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus odit similique</p>
-                        <p>020 7123 141</p>
-                        <p>example@email.com</p>
-                        <a href="stores.html" class="c-item-text-btn">
-                            <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                           Explore
-                         </a>
-                    </div>
-                </div>
-                </div>
-           
+        <div class="OSA-locations-container">
+            <div class="locations-title">
+                <p>DIRECTIONS + MORE</p>
+                <div class="underline"></div>
             </div>
+            <div class="splide animatable-img" id="secondary">
+                <div class="splide__track">
+                  <div class="splide__list fun-cards">
+
+                    <div class="splide__slide fun-card">
+                        <div class="fc-bg"></div>
+    
+                        <div class="fun-card-inner">
+                        <div class="fc-left ">
+                            <img src="./img/langata/18.jpg" alt="" srcset="">
+                        </div>
+                        <div class="fc-right">
+                            <img src="img/location.png" alt="">
+                            <div class="fc-right-rich-text animatable-img" data-text="Awesome">
+                                <span class="actual-text">&nbsp;OSA LANG'ATA ROAD&nbsp;</span>
+                                <span aria-hidden="true" class="hover-text">&nbsp;OSA LANG'ATA ROAD&nbsp;</span>
+                            </div>
+                            <h4>live the adventure</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus odit similique</p>
+                            <p>020 7123 141</p>
+                            <p>example@email.com</p>
+                            <a href="stores.html" class="c-item-text-btn">
+                                <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                               Explore
+                             </a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="splide__slide fun-card">
+                        <div class="fc-bg"></div>
+    
+                        <div class="fun-card-inner">
+                        <div class="fc-left">
+                            <img src="./img/karen/7.jpg" alt="" srcset="">
+                        </div>
+                        <div class="fc-right">
+                            <img src="img/location.png" alt="">
+                            <div class="fc-right-rich-text animatable-img" data-text="Awesome">
+                                <span class="actual-text">&nbsp;OSA KAREN ROAD&nbsp;</span>
+                                <span aria-hidden="true" class="hover-text">&nbsp;OSA KAREN ROAD&nbsp;</span>
+                            </div>
+                            <h4>live the adventure</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus odit similique</p>
+                            <p>020 7123 141</p>
+                            <p>example@email.com</p>
+                            <a href="stores.html" class="c-item-text-btn">
+                                <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                               Explore
+                             </a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="splide__slide fun-card">
+                        <div class="fc-bg"></div>
+    
+                        <div class="fun-card-inner">
+                        <div class="fc-left ">
+                            <img src="./img/langata/16.jpg" alt="" srcset="">
+                        </div>
+                        <div class="fc-right">
+                            <img src="img/location.png" alt="">
+                            <div class="fc-right-rich-text animatable-img" data-text="Awesome">
+                                <span class="actual-text">&nbsp;OSA ROSSLYN&nbsp;</span>
+                                <span aria-hidden="true" class="hover-text">&nbsp;OSA ROSSLYN&nbsp;</span>
+                            </div>
+                            <h4>!! UPCOMING !!</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus odit similique</p>
+                            <p>020 7123 141</p>
+                            <p>example@email.com</p>
+                            <a href="coming-soon.html" class="c-item-text-btn">
+                                <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                               Explore
+                             </a>
+                        </div>
+                    </div>
+                    </div>
+
+                    
+
+                  </div>
+                </div>
+                <div class="my-slider-progress">
+                    <div class="my-slider-progress-bar"></div>
+                  </div>
+              </div>
+              <!-- <a href="stores.html" class="featured-cards-btn"><span>ALL SHOPPING CENTERS</span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg> </a> -->
+
         </div>
         <!-- More info end -->
 
