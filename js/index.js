@@ -71,7 +71,7 @@ const splideSetUp = () => {
   // splide2.mount();
 
   var splide2 = new Splide("#secondary", {
-    // autoplay: true,
+    autoplay: true,
     perPage: 1,
     type: "loop",
   });
