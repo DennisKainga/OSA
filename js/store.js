@@ -26,7 +26,7 @@ const stores = [
   },
   { name: "Toy Town", category: "Toys", logoPath: "./img/gallery-8.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
   { name: "Fitness First", category: "Fitness", logoPath: "./img/gallery-9.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
-  { name: "Blckwood", category: "Drinks", logoPath: "./img/stores/blackwood.png", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Blckwood", category: "Drinks", logoPath: "./img/Stores/blackwood.png", link: "https://naivas.online/", branch: "OSA Langata" },
   { name: "Outdoor Outfitters", category: "Outdoor", logoPath: "./img/gallery-11.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
   { name: "Kitchen Kings", category: "Kitchen", logoPath: "./img/gallery-12.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
   { name: "Auto Alley", category: "Automotive", logoPath: "./img/destination-1.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
