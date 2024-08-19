@@ -101,6 +101,11 @@ img{
 
             .second-right{
                 padding: 20px 0px;
+
+                :nth-child(1){
+                    font-size: 24px;
+                    color: var(--bs-gray-dark);
+                }
             }
         }
         .second-bottom{
@@ -113,10 +118,33 @@ img{
     
         }
         .second-bottom .sb-card{
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
             flex: 1 1;
             text-align: center;
-            min-width: 250px;
+            min-width: 280px;
+
+            h1{
+                color: var(--bs-primary);
+            }
+
+            .svg-container{
+                height: 45px;
+                width: 100%;
+                svg{
+                    height: 100%;
+                }
+                svg.big{
+                    transform: scale(1.3);
+                }
+            }
         }
+
+    
     }
 }
 

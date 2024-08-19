@@ -1,19 +1,37 @@
 const stores = [
-  { name: "Green Grocers", category: "Grocery", logoPath: "./img/gallery-1.jpg" },
-  { name: "Tech Haven", category: "Electronics", logoPath: "./img/gallery-2.jpg" },
-  { name: "Book Nook", category: "Books", logoPath: "./img/gallery-2.jpg" },
-  { name: "Fashion Forward", category: "Clothing", logoPath: "./img/gallery-4.jpg" },
-  { name: "Pet Paradise", category: "Pet Supplies", logoPath: "./img/gallery-5.jpg" },
-  { name: "Home Essentials", category: "Home Goods", logoPath: "./img/gallery-6.jpg" },
-  { name: "Gadget World", category: "Electronics", logoPath: "./img/gallery-7.jpg" },
-  { name: "Toy Town", category: "Toys", logoPath: "./img/gallery-8.jpg" },
-  { name: "Fitness First", category: "Fitness", logoPath: "./img/gallery-9.jpg" },
-  { name: "Beauty Bliss", category: "Beauty", logoPath: "./img/gallery-10.jpg" },
-  { name: "Outdoor Outfitters", category: "Outdoor", logoPath: "./img/gallery-11.jpg" },
-  { name: "Kitchen Kings", category: "Kitchen", logoPath: "./img/gallery-12.jpg" },
-  { name: "Auto Alley", category: "Automotive", logoPath: "./img/destination-1.jpg" },
-  { name: "Music Mania", category: "Music", logoPath: "./img/destination-2.jpg" },
-  { name: "Artistic Avenue", category: "Art Supplies", logoPath: "./img/destination-3.jpg" },
+  { name: "Naivas", category: "Grocery", logoPath: "./img/stores/naivas-logo.png", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Optica", category: "Health", logoPath: "./img/stores/Optica.webp", link: "https://optica.africa/", branch: "OSA Karen" },
+  { name: "Book Nook", category: "Books", logoPath: "./img/gallery-2.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
+  {
+    name: "Scottsdale",
+    category: "Food",
+    logoPath: "./img/stores/Scottsdale.png",
+    link: "https://www.instagram.com/scottsdale_karen/",
+    branch: "OSA Langata",
+  },
+  { name: "Pet Paradise", category: "Pet Supplies", logoPath: "./img/gallery-5.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
+  {
+    name: "Zokai",
+    category: "Home Goods",
+    logoPath: "./img/stores/Zokai.png",
+    link: "https://zokaistore.com/?srsltid=AfmBOoosDxqsawISFHp-d8UIFWW6GOJDGeoN5u7rsNWSgzCBbQHQ_iFn",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Green Grocers",
+    category: "Grocery",
+    logoPath: "./img/stores/Jambo green.jpg",
+    link: "https://jambofreshgreengrocers.com/",
+    branch: "OSA Langata",
+  },
+  { name: "Toy Town", category: "Toys", logoPath: "./img/gallery-8.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Fitness First", category: "Fitness", logoPath: "./img/gallery-9.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
+  { name: "Blckwood", category: "Drinks", logoPath: "./img/stores/blackwood.png", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Outdoor Outfitters", category: "Outdoor", logoPath: "./img/gallery-11.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
+  { name: "Kitchen Kings", category: "Kitchen", logoPath: "./img/gallery-12.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Auto Alley", category: "Automotive", logoPath: "./img/destination-1.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
+  { name: "Music Mania", category: "Music", logoPath: "./img/destination-2.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Artistic Avenue", category: "Art Supplies", logoPath: "./img/destination-3.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
 ];
 
 const batches = [
@@ -28,7 +46,8 @@ const batches = [
 ];
 
 let currentIndex = 0;
-let currentCategory = null;
+let currentCategory = "All";
+let currrentBranch = "All";
 
 const storeSetup = (filteredStores) => {
   const storeContainer = document.querySelector(".store-container");
@@ -40,86 +59,157 @@ const storeSetup = (filteredStores) => {
 
   // Append new store elements
   filteredStores.forEach((store) => {
-    const div = document.createElement("div");
-    div.className = "store-card";
-    const img = document.createElement("img");
-    img.src = store.logoPath;
-    div.append(img);
-    storeContainer.append(div);
+    const parentDiv = document.createElement("a");
+    parentDiv.href = `${store.link}`;
+    parentDiv.target = "_blank";
+    parentDiv.className = "store-card";
+    const html = `
+    <div class='belt'><span>${store.name}</span></div>
+    <img src='${store.logoPath}'/>
+      <div class="store-card__content ">
+        <span class='store-card__title'><b>name:</b> ${store.name}</span>
+        <span class='store-card__description'><b>branch:</b> ${store.branch}</span>
+        <span class='store-card__description'><b>categroy:</b> ${store.category}</span>
+      </div>`;
+
+    parentDiv.innerHTML = html;
+
+    storeContainer.append(parentDiv);
   });
 };
 
-const filterStoresByCategory = (filteredByName, category) => {
-  if (!category || category === "All") {
-    currentCategory = null;
-    return filteredByName;
-  }
-  currentCategory = category;
+const filterEverything = (stores) => {
+  let modStores = [...stores];
 
-  const filteredStores = _.filter(filteredByName, { category: category });
+  modStores = currrentBranch === "All" ? modStores : _.filter(modStores, { link: "https://naivas.online/", branch: currrentBranch });
 
-  return filteredStores;
+  modStores = currentCategory === "All" ? modStores : _.filter(modStores, { category: currentCategory });
+
+  modStores = _.filter(modStores, (store) => {
+    return batches[currentIndex].includes(store.name[0].toLowerCase());
+  });
+  // console.log({ currentIndex, currrentBranch, currentCategory });
+  return modStores;
 };
 
-const filterStoresByName = (index) => {
-  currentIndex = index;
+const chipsPressed = (e) => {
   const filterChips = document.querySelectorAll(".filter-chip");
+
   filterChips.forEach((chip) => {
-    chip.classList.remove("active");
+    if (e.target === chip) {
+      chip.classList.add("active");
+    } else {
+      chip.classList.remove("active");
+    }
   });
-  filterChips[index].classList.add("active");
-
-  const filteredStores = _.filter(stores, (store) => {
-    return batches[index].includes(store.name[0].toLowerCase());
-  });
-
-  return filteredStores;
 };
 
-const filterStores = (index, category) => {
-  const currentFilterIndicator = document.querySelector(".current-filter");
-  index = index === null ? currentIndex : index;
-  category = category === null ? currentCategory : category;
-  currentFilterIndicator.textContent = `${category ?? "FILTER BY CATEGORY"}`;
-  const filteredByName = filterStoresByName(index);
-  const filteredByCategory = filterStoresByCategory(filteredByName, category);
+const filterStores = (e) => {
+  const btn = e.target;
+  const type = btn.getAttribute("filter-type");
 
-  storeSetup(filteredByCategory);
+  switch (type) {
+    case "branch":
+      const currentFilterLoc = document.querySelector(".current-filter.location");
+      const branch = btn.textContent;
+      currentFilterLoc.textContent = `${branch ?? "FILTER BY CATEGORY"}`;
+      currrentBranch = branch;
+      break;
+
+    case "name":
+      chipsPressed(e);
+      const index = btn.getAttribute("data-index");
+      currentIndex = index;
+      break;
+
+    case "category":
+      const category = btn.textContent;
+      const currentFilterCat = document.querySelector(".current-filter.category");
+      currentFilterCat.textContent = `${category ?? "FILTER BY CATEGORY"}`;
+      currentCategory = category;
+      break;
+
+    default:
+      break;
+  }
+
+  const filteredStores = filterEverything(stores);
+
+  storeSetup(filteredStores);
 };
+
+const removeBothDropdowns = () => {
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const filterItemsContainers = document.querySelectorAll(".filter-items");
+  filterButtons.forEach((filterButton) => {
+    filterButton.classList.remove("flip");
+  });
+  filterItemsContainers.forEach((filterItemsContainer) => {
+    filterItemsContainer.classList.remove("show");
+  });
+};
+
+let indexTracker;
 
 const removeFilterDropdown = (e) => {
-  const filterButton = document.querySelector(".filter-button");
-  const filterItemsContainer = document.querySelector(".filter-items");
-
   if (!e.target.classList.contains("filter-button") && !e.target.closest(".filter-items")) {
-    filterItemsContainer.classList.remove("show");
-    filterButton.classList.remove("flip");
+    indexTracker = null;
+    removeBothDropdowns();
   }
+};
+
+const filterButtonPressed = (e) => {
+  const button = e.target;
+  const curIndex = button.getAttribute("data-index");
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const filterItemsContainers = document.querySelectorAll(".filter-items");
+
+  if (indexTracker === curIndex) {
+    removeBothDropdowns();
+    indexTracker = null;
+    return;
+  }
+
+  filterButtons.forEach((btn) => {
+    const btnIndex = btn.getAttribute("data-index");
+    if (btnIndex === curIndex) {
+      btn.classList.add("flip");
+    } else {
+      btn.classList.remove("flip");
+    }
+  });
+
+  filterItemsContainers.forEach((container) => {
+    const containerIndex = container.getAttribute("data-index");
+    if (containerIndex === curIndex) {
+      container.classList.add("show");
+    } else {
+      container.classList.remove("show");
+    }
+  });
+  indexTracker = curIndex;
 };
 
 const setUpPageEventListeners = () => {
   const filterChips = document.querySelectorAll(".filter-chip");
   const filterItems = document.querySelectorAll(".filter-item");
-  const filterButton = document.querySelector(".filter-button");
+  const filterButtons = document.querySelectorAll(".filter-button");
 
-  filterChips.forEach((chip, index) => {
-    chip.addEventListener("click", () => {
-      filterStores(index, null);
+  filterChips.forEach((chip) => {
+    chip.addEventListener("click", (e) => {
+      filterStores(e);
     });
   });
 
-  filterItems.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      filterStores(null, item.textContent);
+  filterItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      filterStores(e);
     });
   });
 
-  filterButton.addEventListener("click", () => {
-    const filterItemsContainer = document.querySelector(".filter-items");
-    filterItemsContainer.classList.toggle("show");
-    filterButton.classList.toggle("flip");
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", filterButtonPressed);
   });
-
   document.addEventListener("click", removeFilterDropdown);
 };
 

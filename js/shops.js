@@ -235,8 +235,6 @@ const setUpStore = (arr) => {
     middleText.textContent = `Floor: ${item.floor.floorText}`;
     const middleTextTwo = document.createElement("span");
     middleTextTwo.textContent = `Size: ${item.size} sq.m`;
-    const bottomText = document.createElement("span");
-    bottomText.textContent = `Rent: Ksh. ${item.rent.rentText}`;
     const btnContainer = document.createElement("div");
     btnContainer.className = "btn-container";
     const anchor = document.createElement("a");
@@ -248,7 +246,6 @@ const setUpStore = (arr) => {
     bottomDiv.append(topText);
     bottomDiv.append(middleText);
     bottomDiv.append(middleTextTwo);
-    bottomDiv.append(bottomText);
     innerDiv.append(topDiv);
     innerDiv.append(bottomDiv);
     parentDiv.append(innerDiv);
