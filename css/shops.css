@@ -409,7 +409,7 @@
     
             .refinement{
                 max-width: 150px;
-                margin: auto;
+                /* margin: auto; */
             }
         }
     }
