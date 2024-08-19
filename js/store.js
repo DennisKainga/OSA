@@ -1,11 +1,11 @@
 const stores = [
-  { name: "Naivas", category: "Grocery", logoPath: "./img/stores/naivas-logo.png", link: "https://naivas.online/", branch: "OSA Langata" },
-  { name: "Optica", category: "Health", logoPath: "./img/stores/Optica.webp", link: "https://optica.africa/", branch: "OSA Karen" },
+  { name: "Naivas", category: "Grocery", logoPath: "./img/Stores/naivas-logo.png", link: "https://naivas.online/", branch: "OSA Langata" },
+  { name: "Optica", category: "Health", logoPath: "./img/Stores/Optica.webp", link: "https://optica.africa/", branch: "OSA Karen" },
   { name: "Book Nook", category: "Books", logoPath: "./img/gallery-2.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
   {
     name: "Scottsdale",
     category: "Food",
-    logoPath: "./img/stores/Scottsdale.png",
+    logoPath: "./img/Stores/Scottsdale.png",
     link: "https://www.instagram.com/scottsdale_karen/",
     branch: "OSA Langata",
   },
@@ -13,14 +13,14 @@ const stores = [
   {
     name: "Zokai",
     category: "Home Goods",
-    logoPath: "./img/stores/Zokai.png",
+    logoPath: "./img/Stores/Zokai.png",
     link: "https://zokaistore.com/?srsltid=AfmBOoosDxqsawISFHp-d8UIFWW6GOJDGeoN5u7rsNWSgzCBbQHQ_iFn",
     branch: "OSA Karen",
   },
   {
     name: "Green Grocers",
     category: "Grocery",
-    logoPath: "./img/stores/Jambo green.jpg",
+    logoPath: "./img/Stores/Jambo green.jpg",
     link: "https://jambofreshgreengrocers.com/",
     branch: "OSA Langata",
   },
@@ -65,7 +65,7 @@ const storeSetup = (filteredStores) => {
     parentDiv.className = "store-card";
     const html = `
     <div class='belt'><span>${store.name}</span></div>
-    <img src=${store.logoPath}/>
+    <img src='${store.logoPath}'/>
       <div class="store-card__content ">
         <span class='store-card__title'><b>name:</b> ${store.name}</span>
         <span class='store-card__description'><b>branch:</b> ${store.branch}</span>
