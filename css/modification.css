@@ -386,6 +386,87 @@ nav{
     display: none;
 }
 
+.footer-cta{
+    h5{
+        display: flex;
+        gap: 15px;
+
+        svg{
+            fill: white;
+            /* background-color: var(--bs-primary); */
+        }
+    }
+
+    input{
+        background-color: transparent;
+        padding: 10px 20px;
+        border: none;
+        border-bottom: 1px solid grey;
+        color: white;
+    }
+
+    input::placeholder{
+        font-size: 16px;
+        color: white;
+    }
+
+     /* From Uiverse.io by satyamchaudharydev */ 
+     .input-box {
+        --width-of-input: 100%;
+        --border-height: 1px;
+        --border-before-color: rgba(221, 221, 221, 0.39);
+        --border-after-color: white;
+        --input-hovered-color: #d239580e;
+        position: relative;
+        width: var(--width-of-input);
+    }
+   /* styling of Input */
+   .input {
+    color: white;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+   }
+
+   .input::placeholder{
+    opacity: 0.9;
+   }
+   /* styling of animated border */
+   .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+   }
+   
+   input:focus {
+    outline: none;
+   }
+   /* here is code of animated border */
+   input:focus ~ .input-border {
+    width: 100%;
+   }
+
+   .cta-btn{
+    margin-top: 40px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 17px;
+    width: 180px;
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+   }
+
+}
+
 @keyframes slide-up {
     0%{
         top: 70%;
