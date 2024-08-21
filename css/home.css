@@ -723,6 +723,8 @@
         .map-selectors{
             width: fit-content;
             margin: auto;
+            display: flex;
+            gap: 10px;
 
             .btn-select{
                 background-color: transparent;
@@ -730,7 +732,7 @@
                 padding: 15px 10px;
                 background-color: none;
                 border-bottom: 3px solid rgba(128, 128, 128, 0.096);
-                font-size: 14px;
+                font-size: 13.4px;
                 color: var(--bs-gray);
             }
 
