@@ -81,7 +81,7 @@ const storeSetup = (filteredStores) => {
 const filterEverything = (stores) => {
   let modStores = [...stores];
 
-  modStores = currrentBranch === "All" ? modStores : _.filter(modStores, { link: "https://naivas.online/", branch: currrentBranch });
+  modStores = currrentBranch === "All" ? modStores : _.filter(modStores, { branch: currrentBranch });
 
   modStores = currentCategory === "All" ? modStores : _.filter(modStores, { category: currentCategory });
 
