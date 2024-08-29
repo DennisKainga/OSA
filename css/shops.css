@@ -395,6 +395,35 @@
     
 }
 
+.no-content{
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    svg{
+        width: 70px;
+        height: 70px;
+        fill: var(--bs-red);
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        margin-top: 20px;
+        color: var(--bs-red);
+    }
+}
+
+.no-content.hidden{
+    display: none;
+}
+
 
 @media (max-width: 810px) {
 

@@ -1,41 +1,236 @@
 const stores = [
-  { name: "Naivas", category: "Grocery", logoPath: "./img/Stores/naivas-logo.png", link: "https://naivas.online/", branch: "OSA Langata" },
-  { name: "Optica", category: "Health", logoPath: "./img/Stores/Optica.webp", link: "https://optica.africa/", branch: "OSA Karen" },
-  { name: "Book Nook", category: "Books", logoPath: "./img/gallery-2.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
+  {
+    name: "Naivas",
+    contact: "0111184200",
+    category: "Shopping",
+    logoPath: "./img/Stores/naivas-logo.png",
+    link: "https://naivas.online/",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Optica",
+    contact: "0115790547",
+    category: "Health",
+    logoPath: "./img/Stores/Optica.png",
+    link: "https://optica.africa/",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Karen Kitchen",
+    contact: "0793875239",
+    category: "Restaurant",
+    logoPath: "./img/Stores/karen-kitchen.jfif",
+    link: "https://web.facebook.com/KarenkitchenOSA/?_rdc=1&_rdr",
+    branch: "OSA Karen",
+  },
   {
     name: "Scottsdale",
-    category: "Food",
+    contact: "N/A",
+    category: "Bar & Restaurant",
     logoPath: "./img/Stores/Scottsdale.png",
     link: "https://www.instagram.com/scottsdale_karen/",
     branch: "OSA Langata",
   },
-  { name: "Pet Paradise", category: "Pet Supplies", logoPath: "./img/gallery-5.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
   {
-    name: "Zokai",
-    category: "Home Goods",
-    logoPath: "./img/Stores/Zokai.png",
-    link: "https://zokaistore.com/?srsltid=AfmBOoosDxqsawISFHp-d8UIFWW6GOJDGeoN5u7rsNWSgzCBbQHQ_iFn",
+    name: "4G Capital",
+    contact: "0758693269",
+    category: "Financial Services",
+    logoPath: "./img/Stores/4G-cap.png",
+    link: "https://www.4g-capital.com/",
     branch: "OSA Karen",
   },
   {
+    name: "Zokai",
+    contact: "0700533156",
+    category: "Home Goods",
+    logoPath: "./img/Stores/Zokai.png",
+    link: "https://zokaistore.com/?srsltid=AfmBOoosDxqsawISFHp-d8UIFWW6GOJDGeoN5u7rsNWSgzCBbQHQ_iFn",
+    branch: "OSA Langata",
+  },
+  {
     name: "Green Grocers",
+    contact: "0793366998",
     category: "Grocery",
     logoPath: "./img/Stores/Jambo green.jpg",
     link: "https://jambofreshgreengrocers.com/",
     branch: "OSA Langata",
   },
-  { name: "Toy Town", category: "Toys", logoPath: "./img/gallery-8.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
-  { name: "Fitness First", category: "Fitness", logoPath: "./img/gallery-9.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
-  { name: "Blckwood", category: "Drinks", logoPath: "./img/Stores/blackwood.png", link: "https://naivas.online/", branch: "OSA Langata" },
-  { name: "Outdoor Outfitters", category: "Outdoor", logoPath: "./img/gallery-11.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
-  { name: "Kitchen Kings", category: "Kitchen", logoPath: "./img/gallery-12.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
-  { name: "Auto Alley", category: "Automotive", logoPath: "./img/destination-1.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
-  { name: "Music Mania", category: "Music", logoPath: "./img/destination-2.jpg", link: "https://naivas.online/", branch: "OSA Langata" },
-  { name: "Artistic Avenue", category: "Art Supplies", logoPath: "./img/destination-3.jpg", link: "https://naivas.online/", branch: "OSA Karen" },
+  {
+    name: "Beauty International",
+    contact: "0745978826",
+    category: "Beauty & Salon",
+    logoPath: "./img/Stores/Beautiful-intl.png",
+    link: "https://www.instagram.com/beautyinternationalke",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Jibu Water",
+    contact: "070408151",
+    category: "Clean water",
+    logoPath: "./img/Stores/Jibu.jpg",
+    link: "https://jibuco.com/ke/",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Blackwood",
+    contact: "N/A",
+    category: "Bar & Restaurant",
+    logoPath: "./img/Stores/blackwood.png",
+    link: "https://www.tiktok.com/discover/blackwood-restaurant-nairobi",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Victoria Beauty Clinic",
+    contact: "0706202450",
+    category: "Beauty & Salon",
+    logoPath: "./img/Stores/VictoriaBC.jpg",
+    link: "https://www.victoriabeautyacademy.co/",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Ankara by Mwara",
+    contact: "0759285830",
+    category: "Clothing",
+    logoPath: "./img/Stores/Ankara.jpg",
+    link: "https://web.facebook.com/p/ankara_by_mwara-100063895971972/?_rdc=1&_rdr",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Sno Cream",
+    contact: "N/A",
+    category: "Restaurant",
+    logoPath: "./img/Stores/Sno_cream.jpg",
+    link: "https://nairobieats.co.ke/reviews/sno-cream/",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Hongkong Kitchen",
+    contact: "0794 584063",
+    category: "Restaurant",
+    logoPath: "./img/Stores/Hongkong.png",
+    link: "https://web.facebook.com/hongkongkitchenadamsarcade/?_rdc=1&_rdr",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Smart Homes",
+    contact: "",
+    category: "Electronics",
+    logoPath: "./img/Stores/smarthome.jpg",
+    link: "https://web.facebook.com/homeautomationke/?locale=pl_PL&_rdc=1&_rdr",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Hair Revolution",
+    contact: "0722 660 573",
+    category: "Male Grooming",
+    logoPath: "./img/Stores/hairrev.jpg",
+    link: "https://www.instagram.com/hairrev_ke/",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Thirsty Oak",
+    contact: "0798 888938",
+    category: "Bar",
+    logoPath: "./img/Stores/thirstyoak.jpg",
+    link: "https://web.facebook.com/thirstyoakke/?_rdc=1&_rdr",
+    branch: "OSA Karen",
+  },
+  {
+    name: "Pharmaplus",
+    contact: "0741352835",
+    category: "Health",
+    logoPath: "./img/Stores/pharmaplus.png",
+    link: "https://www.pharmapluspharmacies.co.ke/",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Greenit Decors",
+    contact: "0796035000",
+    category: "Grocery",
+    logoPath: "./img/Stores/greenit-decors.jpg",
+    link: "https://greenitdecors.co.ke/about-greenit-decors/",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Micos drycleaners",
+    contact: "0757253121",
+    category: "Dry Cleaning",
+    logoPath: "./img/Stores/Micos-dry-cleaners.png",
+    link: "https://micosdrycleaning.com/",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Infinite Touch",
+    contact: "0724220022",
+    category: "Male Grooming",
+    logoPath: "./img/Stores/Infinitetouch.png",
+    link: "https://www.tiktok.com/@infinitetouch.ke",
+    branch: "OSA Langata",
+  },
+  {
+    name: "African Elite wear",
+    contact: "0114445017",
+    category: "Clothing",
+    logoPath: "./img/Stores/African-elite.png",
+    link: "https://www.instagram.com/p/C9CNqUMAyHj/",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Jaslink",
+    contact: "0708999328",
+    category: "Bar",
+    logoPath: "./img/Stores/Jasliquor.png",
+    link: "https://www.instagram.com/jaslink_liquor_store_/?locale=zh_CN",
+    branch: "OSA Langata",
+  },
+  {
+    name: "Umoja Shoe Company",
+    contact: "0714197894",
+    category: "Shoes",
+    logoPath: "./img/Stores/umojawebsite.png",
+    link: "https://umoja.africa/",
+    branch: "OSA Langata",
+  },
 ];
 
 const batches = [
-  ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+  [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+  ],
   ["a", "b", "c", "d"],
   ["e", "f", "g", "h"],
   ["i", "j", "k", "l"],
@@ -69,7 +264,7 @@ const storeSetup = (filteredStores) => {
       <div class="store-card__content ">
         <span class='store-card__title'><b>name:</b> ${store.name}</span>
         <span class='store-card__description'><b>branch:</b> ${store.branch}</span>
-        <span class='store-card__description'><b>categroy:</b> ${store.category}</span>
+        <span class='store-card__description'><b>contact:</b> ${store.contact}</span>
       </div>`;
 
     parentDiv.innerHTML = html;
@@ -81,9 +276,21 @@ const storeSetup = (filteredStores) => {
 const filterEverything = (stores) => {
   let modStores = [...stores];
 
-  modStores = currrentBranch === "All" ? modStores : _.filter(modStores, { branch: currrentBranch });
+  // Filter modStores based on branch
+  modStores =
+    currrentBranch === "All"
+      ? modStores
+      : _.filter(modStores, function (store) {
+          return store.branch.toLowerCase() === currrentBranch.toLowerCase();
+        });
 
-  modStores = currentCategory === "All" ? modStores : _.filter(modStores, { category: currentCategory });
+  // Filter modStores based on category
+  modStores =
+    currentCategory === "All"
+      ? modStores
+      : _.filter(modStores, function (store) {
+          return store.category.toLowerCase() === currentCategory.toLowerCase();
+        });
 
   modStores = _.filter(modStores, (store) => {
     return batches[currentIndex].includes(store.name[0].toLowerCase());

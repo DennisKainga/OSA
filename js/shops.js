@@ -1,104 +1,104 @@
 const availableShops = [
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "2nd floor", floorNum: 2 },
     size: 100,
     rent: { rentText: "48,000", rentNum: 48000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "1st floor", floorNum: 1 },
     size: 2700,
     rent: { rentText: "70,000", rentNum: 70000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "3rd floor", floorNum: 3 },
     size: 300,
     rent: { rentText: "40,000", rentNum: 40000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "2nd floor", floorNum: 2 },
     size: 200,
     rent: { rentText: "10,000", rentNum: 10000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "1st floor", floorNum: 1 },
     size: 400,
     rent: { rentText: "48,000", rentNum: 48000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "3rd floor", floorNum: 3 },
     size: 100,
     rent: { rentText: "30,000", rentNum: 30000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "2nd floor", floorNum: 2 },
     size: 350,
     rent: { rentText: "45,000", rentNum: 45000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "1st floor", floorNum: 1 },
     size: 100,
     rent: { rentText: "30,000", rentNum: 30000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "3rd floor", floorNum: 3 },
     size: 350,
     rent: { rentText: "15,000", rentNum: 15000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "2nd floor", floorNum: 2 },
     size: 2000,
     rent: { rentText: "30,000", rentNum: 30000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "1st floor", floorNum: 1 },
     size: 600,
     rent: { rentText: "48,000", rentNum: 48000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "3rd floor", floorNum: 3 },
     size: 1200,
     rent: { rentText: "38,000", rentNum: 38000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "2nd floor", floorNum: 2 },
     size: 2500,
     rent: { rentText: "58,000", rentNum: 58000 },
     imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA Karen road",
+    branch: "OSA Langata road",
     floor: { floorText: "1st floor", floorNum: 1 },
     size: 2100,
     rent: { rentText: "42,000", rentNum: 42000 },
-    imgPath: "./img/karen/7.jpg",
+    imgPath: "./img/langata/11.jpg",
   },
   {
-    branch: "OSA lang'ata road",
+    branch: "OSA Langata road",
     floor: { floorText: "3rd floor", floorNum: 3 },
     size: 2500,
     rent: { rentText: "55,000", rentNum: 55000 },
@@ -161,6 +161,7 @@ const toggleActiveClass = (arr, e) => {
   arr.forEach((chip) => {
     chip.classList.remove("active");
   });
+  if (!e) return;
   e.target.classList.add("active");
 };
 
@@ -211,6 +212,13 @@ const toggleFilters = (e) => {
 };
 
 const setUpStore = (arr) => {
+  const noContentContainer = document.querySelector(".no-content");
+
+  if (arr.length > 0) {
+    noContentContainer.classList.add("hidden");
+  } else {
+    noContentContainer.classList.remove("hidden");
+  }
   const filteredContentContainer = document.querySelector(".filtered-content");
 
   while (filteredContentContainer.firstChild) {
@@ -252,6 +260,31 @@ const setUpStore = (arr) => {
 
     filteredContentContainer.append(parentDiv);
   });
+};
+
+const clearFilters = () => {
+  curBranch = "All";
+  curFloor = "All";
+  curSize = "All";
+
+  const branchLabel = document.querySelector(".label-branch");
+  const floorLabel = document.querySelector(".label-floor");
+  const sizeLabel = document.querySelector(".label-size");
+
+  const filterChipBranch = document.querySelectorAll(".filter-chip.branch");
+  const filterChipFloor = document.querySelectorAll(".filter-chip.floor");
+  const filterChipSize = document.querySelectorAll(".filter-chip.size");
+  const filterChipRent = document.querySelectorAll(".filter-chip.rent");
+
+  branchLabel.textContent = `Branch`;
+  floorLabel.textContent = `Floor`;
+  sizeLabel.textContent = `Size`;
+
+  const arr = [...filterChipBranch, ...filterChipFloor, ...filterChipSize, ...filterChipRent];
+
+  toggleActiveClass(arr, null);
+
+  setUpStore(availableShops);
 };
 
 const addNavEventlisteners = () => {
