@@ -123,8 +123,8 @@ const stores = [
     name: "Hair Revolution",
     contact: "0722 660 573",
     category: "Male Grooming",
-    logoPath: "./img/Stores/hairrev.jpg",
-    link: "https://www.instagram.com/Hairrev_ke/",
+    logoPath: "./img/Stores/Hairrev.jpg",
+    link: "https://www.instagram.com/hairrev_ke/",
     branch: "OSA Karen",
   },
   {
