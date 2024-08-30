@@ -137,6 +137,16 @@ const applyAllFilters = (arr) => {
   return modArray;
 };
 
+const removeAllDropDowns = () => {
+  const labels = document.querySelectorAll(".label");
+  const collapsables = document.querySelectorAll(".collapsable");
+
+  labels.forEach((label, index) => {
+    label.classList.remove("active");
+    collapsables[index].classList.remove("show");
+  });
+};
+
 const removeDropdown = (e) => {
   const labels = document.querySelectorAll(".label");
   const collapsables = document.querySelectorAll(".collapsable");
@@ -153,6 +163,7 @@ const removeDropdown = (e) => {
 
 const toggleDropDown = (e) => {
   if (!e.target.classList.contains("refinement")) return;
+  removeAllDropDowns();
   e.target.querySelector(".label").classList.toggle("active");
   e.target.querySelector(".collapsable").classList.toggle("show");
 };
