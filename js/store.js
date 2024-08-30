@@ -243,6 +243,7 @@ const batches = [
 let currentIndex = 0;
 let currentCategory = "All";
 let currrentBranch = "All";
+let currentFuzzy = "";
 
 const storeSetup = (filteredStores) => {
   const storeContainer = document.querySelector(".store-container");
@@ -276,6 +277,14 @@ const storeSetup = (filteredStores) => {
 const filterEverything = (stores) => {
   let modStores = [...stores];
 
+  console.log(currentFuzzy);
+  modStores =
+    currentFuzzy === ""
+      ? modStores
+      : _.filter(modStores, function (store) {
+          return store.name.toLowerCase().includes(currentFuzzy.toLowerCase().trim());
+        });
+
   // Filter modStores based on branch
   modStores =
     currrentBranch === "All"
@@ -283,6 +292,7 @@ const filterEverything = (stores) => {
       : _.filter(modStores, function (store) {
           return store.branch.toLowerCase() === currrentBranch.toLowerCase();
         });
+  console.log(modStores);
 
   // Filter modStores based on category
   modStores =
@@ -397,10 +407,19 @@ const filterButtonPressed = (e) => {
   indexTracker = curIndex;
 };
 
+const handleChange = (e) => {
+  currentFuzzy = e.target.value;
+  const filteredStores = filterEverything(stores);
+  storeSetup(filteredStores);
+};
+
 const setUpPageEventListeners = () => {
+  const input = document.querySelector(".input-filter");
   const filterChips = document.querySelectorAll(".filter-chip");
   const filterItems = document.querySelectorAll(".filter-item");
   const filterButtons = document.querySelectorAll(".filter-button");
+
+  input.addEventListener("input", handleChange);
 
   filterChips.forEach((chip) => {
     chip.addEventListener("click", (e) => {

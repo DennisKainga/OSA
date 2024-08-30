@@ -420,9 +420,47 @@
     }
 }
 
+.no-content{
+    .special.hidden,
+    .regular.hidden{
+        display: none;
+    }
+
+    .special{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        P{
+            color: var(--bs-gray-dark);
+            font-size: 22px;
+            max-width: 350px;
+            width: 100%;
+            padding: 0px 10px;
+
+
+            span{
+                /* font-size: 25px; */
+                color: var(--bs-primary);
+                font-weight: 600;
+            }
+        }
+
+        svg{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+        }
+        
+    }
+}
+
 .no-content.hidden{
     display: none;
+    
 }
+
+
 
 
 @media (max-width: 810px) {

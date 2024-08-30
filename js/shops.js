@@ -213,11 +213,20 @@ const toggleFilters = (e) => {
 
 const setUpStore = (arr) => {
   const noContentContainer = document.querySelector(".no-content");
+  const special = document.querySelector(".special");
+  const regular = document.querySelector(".regular");
 
   if (arr.length > 0) {
     noContentContainer.classList.add("hidden");
   } else {
     noContentContainer.classList.remove("hidden");
+    if (curBranch === "OSA Karen road") {
+      special.classList.remove("hidden");
+      regular.classList.add("hidden");
+    } else {
+      special.classList.add("hidden");
+      regular.classList.remove("hidden");
+    }
   }
   const filteredContentContainer = document.querySelector(".filtered-content");
 
