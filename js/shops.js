@@ -137,11 +137,12 @@ const applyAllFilters = (arr) => {
   return modArray;
 };
 
-const removeAllDropDowns = () => {
+const removeAllDropDowns = (curLabel, curCollapsable) => {
   const labels = document.querySelectorAll(".label");
   const collapsables = document.querySelectorAll(".collapsable");
 
   labels.forEach((label, index) => {
+    if (label === curLabel || curCollapsable === collapsables[index]) return;
     label.classList.remove("active");
     collapsables[index].classList.remove("show");
   });
@@ -161,11 +162,16 @@ const removeDropdown = (e) => {
   }
 };
 
+let curTarget;
+
 const toggleDropDown = (e) => {
   if (!e.target.classList.contains("refinement")) return;
-  removeAllDropDowns();
-  e.target.querySelector(".label").classList.toggle("active");
-  e.target.querySelector(".collapsable").classList.toggle("show");
+
+  const curLabel = e.target.querySelector(".label");
+  const curCollapsable = e.target.querySelector(".collapsable");
+  curLabel.classList.toggle("active");
+  curCollapsable.classList.toggle("show");
+  removeAllDropDowns(curLabel, curCollapsable);
 };
 
 const toggleActiveClass = (arr, e) => {
