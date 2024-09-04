@@ -1,108 +1,56 @@
 const availableShops = [
   {
     branch: "OSA Langata road",
-    floor: { floorText: "2nd floor", floorNum: 2 },
-    size: 100,
+    floor: { floorText: "1st floor", floorNum: 1 },
+    size: 743,
     rent: { rentText: "48,000", rentNum: 48000 },
-    imgPath: "./img/langata/11.jpg",
+    imgPath: "./img/Empty/F02/img2.jpg",
+    imgArr: [
+      "./img/Empty/F02/img1.jpg",
+      "./img/Empty/F02/img2.jpg",
+      "./img/Empty/F02/img3.jpg",
+      "./img/Empty/F02/img4.jpg",
+      "./img/Empty/F02/img5.jpg",
+    ],
   },
   {
     branch: "OSA Langata road",
     floor: { floorText: "1st floor", floorNum: 1 },
-    size: 2700,
+    size: 650,
     rent: { rentText: "70,000", rentNum: 70000 },
-    imgPath: "./img/langata/11.jpg",
+    imgPath: "./img/Empty/F01G/img4.jpg",
+    imgArr: ["./img/Empty/F01G/img1.jpg", "./img/Empty/F01G/img2.jpg", "./img/Empty/F01G/img3.jpg", "./img/Empty/F01G/img4.jpg"],
   },
   {
     branch: "OSA Langata road",
-    floor: { floorText: "3rd floor", floorNum: 3 },
-    size: 300,
+    floor: { floorText: "2nd floor", floorNum: 2 },
+    size: 896.64,
     rent: { rentText: "40,000", rentNum: 40000 },
-    imgPath: "./img/langata/11.jpg",
+    imgPath: "./img/Empty/S06/img7.jpg",
+    imgArr: [
+      "./img/Empty/S06/img1.jpg",
+      "./img/Empty/S06/img2.jpg",
+      "./img/Empty/S06/img3.jpg",
+      "./img/Empty/S06/img4.jpg",
+      "./img/Empty/S06/img5.jpg",
+      "./img/Empty/S06/img6.jpg",
+      "./img/Empty/S06/img7.jpg",
+    ],
   },
   {
     branch: "OSA Langata road",
     floor: { floorText: "2nd floor", floorNum: 2 },
-    size: 200,
+    size: 1098.12,
     rent: { rentText: "10,000", rentNum: 10000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "1st floor", floorNum: 1 },
-    size: 400,
-    rent: { rentText: "48,000", rentNum: 48000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "3rd floor", floorNum: 3 },
-    size: 100,
-    rent: { rentText: "30,000", rentNum: 30000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "2nd floor", floorNum: 2 },
-    size: 350,
-    rent: { rentText: "45,000", rentNum: 45000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "1st floor", floorNum: 1 },
-    size: 100,
-    rent: { rentText: "30,000", rentNum: 30000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "3rd floor", floorNum: 3 },
-    size: 350,
-    rent: { rentText: "15,000", rentNum: 15000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "2nd floor", floorNum: 2 },
-    size: 2000,
-    rent: { rentText: "30,000", rentNum: 30000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "1st floor", floorNum: 1 },
-    size: 600,
-    rent: { rentText: "48,000", rentNum: 48000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "3rd floor", floorNum: 3 },
-    size: 1200,
-    rent: { rentText: "38,000", rentNum: 38000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "2nd floor", floorNum: 2 },
-    size: 2500,
-    rent: { rentText: "58,000", rentNum: 58000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "1st floor", floorNum: 1 },
-    size: 2100,
-    rent: { rentText: "42,000", rentNum: 42000 },
-    imgPath: "./img/langata/11.jpg",
-  },
-  {
-    branch: "OSA Langata road",
-    floor: { floorText: "3rd floor", floorNum: 3 },
-    size: 2500,
-    rent: { rentText: "55,000", rentNum: 55000 },
-    imgPath: "./img/langata/11.jpg",
+    imgPath: "./img/Empty/S10/img3.jpg",
+    imgArr: [
+      "./img/Empty/S10/img1.jpg",
+      "./img/Empty/S10/img2.jpg",
+      "./img/Empty/S10/img3.jpg",
+      "./img/Empty/S10/img4.jpg",
+      "./img/Empty/S10/img5.jpg",
+      "./img/Empty/S10/img6.jpg",
+    ],
   },
 ];
 
@@ -228,6 +176,52 @@ const toggleFilters = (e) => {
   setUpStore(filteredArray);
 };
 
+const mountSplide = () => {
+  // Check if Splide instance already exists
+  if (window.splide) {
+    window.splide.destroy();
+  }
+
+  // Create a new Splide instance
+  window.splide = new Splide(`#main-carousel`, {
+    // autoplay: true,
+    perPage: 1,
+    lazyLoad: "nearby",
+  });
+
+  // Mount the new instance
+  window.splide.mount();
+};
+
+const showCarousel = (content) => {
+  const track = document.querySelector(".splide__list");
+  const description = document.querySelector(".extra-content .description");
+
+  description.innerHTML = `
+  <h1 >${content.branch}</h1>
+  <h5 >Floor: ${content.floor.floorText}</h5>
+  <h5 >Size:  ${content.size} sq.ft</h5>          
+  `;
+
+  while (track.firstChild) {
+    track.removeChild(track.firstChild);
+  }
+  content.imgArr.forEach((path) => {
+    const imgTag = document.createElement("img");
+    imgTag.src = `${path}`;
+    imgTag.className = "splide__slide";
+    track.append(imgTag);
+  });
+
+  mountSplide();
+};
+
+const toggleSplide = (content) => {
+  document.querySelector(".bounding-box").classList.toggle("show");
+  if (!content) return;
+  showCarousel(content);
+};
+
 const setUpStore = (arr) => {
   const noContentContainer = document.querySelector(".no-content");
   const special = document.querySelector(".special");
@@ -254,35 +248,27 @@ const setUpStore = (arr) => {
   arr.forEach((item) => {
     const parentDiv = document.createElement("div");
     parentDiv.className = "filtered-card";
-    const innerDiv = document.createElement("div");
-    innerDiv.className = "filtered-card-inner";
-    const topDiv = document.createElement("div");
-    topDiv.className = "fc-top";
-    const img = document.createElement("img");
-    img.src = item.imgPath;
-    topDiv.append(img);
-    const bottomDiv = document.createElement("div");
-    bottomDiv.className = "fc-bottom";
-    const topText = document.createElement("span");
-    topText.textContent = `${item.branch}`;
-    const middleText = document.createElement("span");
-    middleText.textContent = `Floor: ${item.floor.floorText}`;
-    const middleTextTwo = document.createElement("span");
-    middleTextTwo.textContent = `Size: ${item.size} sq.m`;
-    const btnContainer = document.createElement("div");
-    btnContainer.className = "btn-container";
-    const anchor = document.createElement("a");
-    anchor.href = "contact.html";
-    anchor.textContent = "Contact us";
 
-    btnContainer.append(anchor);
-    topDiv.append(btnContainer);
-    bottomDiv.append(topText);
-    bottomDiv.append(middleText);
-    bottomDiv.append(middleTextTwo);
-    innerDiv.append(topDiv);
-    innerDiv.append(bottomDiv);
-    parentDiv.append(innerDiv);
+    const cardInnerHtml = `
+            <div class="filtered-card-inner">
+                <div class="fc-top">
+                    <img src="${item.imgPath}">
+                    <div class="btn-container">
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="fc-bottom">
+                  <span>${item.branch}</span>
+                  <span>Floor: ${item.floor.floorText}</span>
+                  <span>Size: ${item.size} sq.ft</span>
+                </div>
+            </div>`;
+
+    parentDiv.innerHTML = cardInnerHtml;
+
+    parentDiv.onclick = () => {
+      toggleSplide(item);
+    };
 
     filteredContentContainer.append(parentDiv);
   });
@@ -313,6 +299,14 @@ const clearFilters = () => {
   setUpStore(availableShops);
 };
 
+const adjustCarouselWidthHeight = () => {
+  const mainCarousel = document.querySelector("#main-carousel");
+  const mainWidth = mainCarousel.getBoundingClientRect().width;
+  const aspecRatio = 720 / 540;
+  const height = (1 / aspecRatio) * mainWidth;
+  mainCarousel.style.height = `${height}px`;
+};
+
 const addNavEventlisteners = () => {
   const refinementBtns = document.querySelectorAll(".refinement");
   const filterChips = document.querySelectorAll(".filter-chip");
@@ -328,8 +322,11 @@ const addNavEventlisteners = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   addNavEventlisteners();
+  adjustCarouselWidthHeight();
 
   setUpStore(availableShops);
 });
 
 document.addEventListener("click", removeDropdown);
+
+window.addEventListener("resize", adjustCarouselWidthHeight);

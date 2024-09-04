@@ -1,4 +1,8 @@
 
+
+body{
+    overflow-x: hidden;
+}
 .page-title{
     /* background-color: red; */
     width: 100%;
@@ -261,7 +265,7 @@
 
 
                         
-                        a{
+                        button{
                             width: 150px;
                             display: inline-block;
                             padding: 0.5rem 1.8rem;
@@ -325,32 +329,32 @@
             }
 
             .filtered-card:hover{
-                transform: translateY(-20px);
+                transform: translateY(-5px);
 
                 .btn-container{
                     opacity: 1;
 
                     
-                    a{
+                    button{
                         color: white;
                         }
                         
-                        a::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: var(--bs-red);
-                        transform: translateX(-100%);
-                        transition: all .3s;
-                        z-index: -1;
-                        }
-                        
-                        a::before {
-                        transform: translateX(0);
-                        }
+                    button::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--bs-red);
+                    transform: translateX(-100%);
+                    transition: all .3s;
+                    z-index: -1;
+                    }
+                    
+                    button::before {
+                    transform: translateX(0);
+                    }
 
                 }
             }
@@ -360,6 +364,130 @@
     }
 
 
+
+}
+
+.splide-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+
+.bounding-box{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 101;
+
+}
+
+.splide-container::-webkit-scrollbar{
+    display: none;
+}
+
+.splide-container{
+    position: absolute;
+    width: calc(100% - 10px);
+    max-width: 650px;
+    height: fit-content;
+    max-height: calc(100vh - 60px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    /* background-color: rgb(0, 0, 0); */
+    z-index: 102;
+    overflow-y: scroll;
+    border-radius: 12px ;
+
+
+    #main-carousel{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .splide__track{
+        border-radius: 12px 12px 0px 0px;
+        height: fit-content;
+    }
+    .splide__track{
+        img{
+            width: 300px
+
+           
+        }
+    }
+
+    .extra-content{
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0px 0px 12px 12px;
+
+
+        a{
+            width: 150px;
+            display: inline-block;
+            padding: 0.5rem 1.8rem;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--bs-red);
+            border: 1px solid var(--bs-red);
+            cursor: pointer;
+            position: relative;
+            background-color: transparent;
+            text-decoration: none;
+            overflow: hidden;
+            z-index: 1;
+            font-family: inherit;
+            border-radius: 100000px;
+            
+            }
+
+        a:hover{
+            color: white;
+            }
+            
+        a:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bs-red);
+        transform: translateX(-100%);
+        transition: all .3s;
+        z-index: -1;
+        }
+        
+        a:hover::before {
+        transform: translateX(0);
+        }
+    }
+
+
+}
+
+.bounding-box.show{
+    opacity: 1;
+    pointer-events: all;
+    
 }
 
 
