@@ -330,3 +330,17 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("click", removeDropdown);
 
 window.addEventListener("resize", adjustCarouselWidthHeight);
+
+const toggleFilterBar = () => {
+  const breadcrumbNav = document.querySelector(".breadcrumb-nav");
+  const text = document.querySelector(".toggle-text");
+
+  breadcrumbNav.classList.toggle("show");
+  document.querySelector(".see-filters").classList.toggle("active");
+
+  if (breadcrumbNav.classList.contains("show")) {
+    text.textContent = "Hide Filters";
+  } else {
+    text.textContent = "Show Filters";
+  }
+};
