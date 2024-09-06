@@ -209,6 +209,7 @@ const showCarousel = (content) => {
   content.imgArr.forEach((path) => {
     const imgTag = document.createElement("img");
     imgTag.src = `${path}`;
+    imgTag.loading = "lazy";
     imgTag.className = "splide__slide";
     track.append(imgTag);
   });
@@ -252,7 +253,7 @@ const setUpStore = (arr) => {
     const cardInnerHtml = `
             <div class="filtered-card-inner">
                 <div class="fc-top">
-                    <img src="${item.imgPath}">
+                    <img src="${item.imgPath}" loading="lazy">
                     <div class="btn-container">
                         <button>View</button>
                     </div>

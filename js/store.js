@@ -261,7 +261,7 @@ const storeSetup = (filteredStores) => {
     parentDiv.className = "store-card";
     const html = `
     <div class='belt'><span>${store.name}</span></div>
-    <img src='${store.logoPath}'/>
+    <img src='${store.logoPath}' loading="lazy"/>
       <div class="store-card__content ">
         <span class='store-card__title'><b>name:</b> ${store.name}</span>
         <span class='store-card__description'><b>branch:</b> ${store.branch}</span>
