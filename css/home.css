@@ -1246,9 +1246,7 @@
         height: fit-content;
     }
     .img-fluid,
-    .carousel-inner,
-    .carousel-actions,
-    .c-light-bg{
+    .carousel-inner{
         height: 500px;
     }
     .c-item-text{
@@ -1437,9 +1435,7 @@
         }
     }
     .img-fluid,
-    .carousel-inner,
-    .carousel-actions,
-    .c-light-bg{
+    .carousel-inner{
         height: fit-content;
     }
 
