@@ -43,7 +43,7 @@
     background-image: url("../img/langata/11.jpg");
     background-size: cover;
     height: 100vh;
-    max-height: 800px;
+    max-height: 1100px;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -122,7 +122,7 @@
 .double-door-animation.animatable-img::before,
 .double-door-animation.animatable-img::after{
     top: 0;
-    transition: transform 800ms ease, opacity 800ms ease;
+    transition: transform 600ms ease, opacity 600ms ease;
     opacity: 1;
     width: 100%;
     transform: scaleX(0.5);

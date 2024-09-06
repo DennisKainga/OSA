@@ -1,7 +1,7 @@
 
 .carousel-header{
     height: 100vh;
-    max-height: 800px;
+    max-height: 1050px;
     width: 100%;
     border: 0px solid var(--bs-white);
     border-bottom: 0px;
@@ -28,14 +28,67 @@
     right: 50%;
     transform: translate(50%, -50%);
     z-index: 90;
-    font-size: 36px;
     font-weight: 500;
-    color: white;
     letter-spacing: 1.5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
 }
+
+.carousel-item{
+    .pin{
+        transition: right 800ms cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+        position: absolute;
+        right: -200px;
+        overflow: hidden;
+        color: rgb(255, 255, 255);        
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    
+        padding: 10px;
+        font-size: 13px;
+        background-color: rgba(255, 255, 255, 0.288);
+        /* display: none; */
+    
+        span{
+            z-index: 2;
+        
+        }
+    
+        svg{
+            fill: var(--bs-red);
+        }
+        padding-right: 20px;
+    }
+
+    
+
+    .pin::after{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        background-color: var(--bs-red);
+        right: 0px;
+        z-index: 0;
+        opacity: .4;
+
+
+    }
+}
+
+.carousel-item.active{
+
+    .pin{
+        right: 0px;
+    
+    }
+
+} 
+
 /* From Uiverse.io by vinodjangid07 */ 
 .c-item-text-btn {
     width: 110px;
@@ -51,19 +104,20 @@
     border: none;
     position: relative;
     cursor: pointer;
-    transition-duration: .2s;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
     padding: 0px 12px;
     transition-duration: .5s;
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: .8;
+
   }
   
   .c-item-text-btn .svgIcon {
     height: 25px;
     transition-duration: 1.5s;
-    fill: grey;
-  }
+    fill: var(--bs-gray-dark);
+}
   
   .c-item-text-btn .bell path {
     fill: rgb(19, 19, 19);
@@ -92,7 +146,7 @@
   
 .carousel-item.active .c-item-text{
    
-    animation: slide-up 1.5s ease 500ms forwards;
+    animation: slide-up 1s cubic-bezier(0.075, 0.82, 0.165, 1) .5s forwards;
 
 
 }
@@ -1055,37 +1109,16 @@
 
 
 
-
-              
-@keyframes neon {
-    0% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-    }
-    50% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
-    }
-    100% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-    }
-  }
-
-
-
-
 @keyframes slide-up {
     0%{
         top: 70%;
         opacity: 0;
+        pointer-events: none;
     }
     100%{
         top: 60%;
         opacity: 1;
+        pointer-events: all;
     }
     
 }
@@ -1110,6 +1143,17 @@
 
 
 @media(max-width: 991px){
+    .c-item-text p{
+        color: rgb(255, 246, 246);
+        /* padding: 10px; */
+        font-size: 28px;
+        background-color: rgba(255, 255, 255, 0.336);
+        span{
+            color: var(--bs-red);
+            font-weight: 600;
+            font-size: 33px;
+        }
+    }
     #navbar{
         padding: 5px 40px;
     }
@@ -1157,14 +1201,28 @@
 }
 
 @media(max-width: 810px){
+
+    .c-item-text p{
+        color: rgb(255, 246, 246);
+        /* padding: 10px; */
+        font-size: 11px;
+        background-color: rgba(255, 255, 255, 0.336);
+        span{
+            color: var(--bs-red);
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
     @keyframes slide-up {
         0%{
             top: 70%;
             opacity: 0;
+            pointer-events: none;
         }
         100%{
             top: 50%;
             opacity: 1;
+            pointer-events: all;
         }
         
     }
@@ -1307,6 +1365,17 @@
 
 
 @media(max-width: 450px){
+
+    .carousel-header,
+    .carousel-item{
+        min-height: 400px;
+        
+    }
+
+    .carousel-item img{
+        min-height: 400px;
+    }
+
     .Hero-pattern{
         .hero-curve{
             height: 50px;
