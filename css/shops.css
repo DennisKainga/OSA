@@ -11,7 +11,7 @@ body{
     margin: auto;
     
 
-    p{
+    & p{
         width: fit-content;
         
         max-width: 1380px;
@@ -21,7 +21,7 @@ body{
         color: var(--bs-red);
     }
 
-    span{
+    & span{
         display: block;
         width: 100%;
         max-width: 325px;
@@ -51,7 +51,7 @@ body{
 .see-filters.active{
     color: var(--bs-red);
 
-    svg{
+    & svg{
         fill: var(--bs-red);
     }
 }
@@ -60,7 +60,7 @@ body{
     transform: scale(1.05);
     color: var(--bs-red);
 
-    svg{
+    & svg{
         fill: var(--bs-red);
     }
 }
@@ -77,7 +77,7 @@ body{
 
 
 
-    .breadcrumb-nav{
+    & .breadcrumb-nav{
         position: sticky;
         top: 100px;
         width: 100%;
@@ -90,7 +90,7 @@ body{
         background-color: var(--bs-white);
         z-index: 2;
 
-        .refinement{
+        & .refinement{
             max-width: 200px;
             position: relative;
             width: 100%;
@@ -102,7 +102,7 @@ body{
             flex:  1 1;
             min-width: 200px;
             
-            .label{
+            & .label{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -115,14 +115,14 @@ body{
                 border-radius: 8px;
                 font-size: 14px;
 
-                span{
+                & span{
                     max-width: 190px;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
                 }
 
-                svg{
+                & svg{
                     transition: transform 150ms ease;
 
                     fill: var(--bs-red);
@@ -130,18 +130,18 @@ body{
                 }
 
 
-                .svg-container{
+                & .svg-container{
 
-                    svg{
+                    & svg{
                         fill: var(--bs-primary);
                     }
                      
-                    .inactive{
+                    & .inactive{
                         display: block;
 
                     }
 
-                    .active{
+                    & .active{
                         display: none;
                     }
                 }
@@ -149,17 +149,17 @@ body{
                 
             }
             
-            .label.active{
-                svg{
+            & .label.active{
+                & svg{
                     transform: rotate(180deg);
                 }
-                .svg-container{
+                & .svg-container{
 
-                    .inactive{
+                    & .inactive{
                         display: none;
                     }
                      
-                    .active{
+                    & .active{
                         display: block;
                     }
 
@@ -168,7 +168,7 @@ body{
             }
            
 
-            .collapsable{
+            & .collapsable{
                 min-width: 140px;
                 position: absolute;
                 left: 0;
@@ -184,13 +184,13 @@ body{
                 z-index: 10;
                 /* background-color: red; */
                 
-                a{
+                & a{
                     display: flex;
                     align-items: center;
                     text-align: left;
                     padding-left: 5px;
                 }
-                .filter-chip{
+                & .filter-chip{
                     width: 100%;
                     border: none;
                     position: relative;
@@ -203,12 +203,12 @@ body{
                     
                 }
 
-                .filter-chip:hover{
+                & .filter-chip:hover{
                     background-color: #d4d4d418;
                 }
 
 
-                .filter-chip::before{
+                & .filter-chip::before{
                     content: '';
                     position: absolute;
                     left: 0;
@@ -218,14 +218,14 @@ body{
 
                 }
 
-                .filter-chip.active{
+                & .filter-chip.active{
                     background-color: #dc354662;
                     color: var(--bs-white);
 
                 }
             }
 
-            .collapsable.show{
+            & .collapsable.show{
                 opacity: 1;
                 pointer-events: all;
                 
@@ -237,18 +237,18 @@ body{
 
     }
 
-    .filtered-content-container{
+    & .filtered-content-container{
         flex-grow: 1;
         min-width: 0;
        
 
-        .filtered-content{
+        & .filtered-content{
             display: flex;
             flex-wrap: wrap;
             width: 100%;
             height: fit-content;
 
-            .filtered-card{
+            & .filtered-card{
                 cursor: pointer;
                 width: 25%;
                 height: fit-content;
@@ -262,7 +262,7 @@ body{
 
                 
 
-                .filtered-card-inner{
+                & .filtered-card-inner{
                     box-shadow: 0px 0px 10px 10px rgba(233, 180, 180, 0.144);
                     padding: 0px 0px;
                     border-radius: 6px;
@@ -273,12 +273,12 @@ body{
                 }
 
 
-                .fc-top{
+                & .fc-top{
                     display: grid;
                     padding: 0px 0px;
                     overflow: hidden;
                     position: relative;
-                    img{
+                    & img{
                         width: 100%;
                         margin: auto;
                         object-fit: cover;
@@ -287,7 +287,7 @@ body{
                     /* background-color: var(--bs-primary); */
                     border-radius: 8px 8px 0px 0px;
 
-                    .btn-container{
+                    & .btn-container{
                         opacity: 0;
                         position: absolute;
                         width: 100%;
@@ -302,7 +302,7 @@ body{
 
 
                         
-                        button{
+                        & button{
                             width: 150px;
                             display: inline-block;
                             padding: 0.5rem 1.8rem;
@@ -330,7 +330,7 @@ body{
           
 
 
-                .fc-bottom{
+                & .fc-bottom{
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
@@ -341,7 +341,7 @@ body{
 
                     
 
-                    :nth-child(1){
+                    & :nth-child(1){
                         font-weight: 600;
                         font-size: 18px;
                         color: var(--bs-primary);
@@ -350,7 +350,7 @@ body{
                     
                 }
 
-                .fc-bottom::after{
+                & .fc-bottom::after{
                     content: '';
                     position: absolute;
                     right: 20px;
@@ -365,18 +365,18 @@ body{
     
             }
 
-            .filtered-card:hover{
+            & .filtered-card:hover{
                 transform: translateY(-5px);
 
-                .btn-container{
+                & .btn-container{
                     opacity: 1;
 
                     
-                    button{
+                    & button{
                         color: white;
                         }
                         
-                    button::before {
+                    & button::before {
                     content: "";
                     position: absolute;
                     left: 0;
@@ -389,7 +389,7 @@ body{
                     z-index: -1;
                     }
                     
-                    button::before {
+                    & button::before {
                     transform: translateX(0);
                     }
 
@@ -449,24 +449,24 @@ body{
     border-radius: 12px ;
 
 
-    #main-carousel{
+    & #main-carousel{
         width: 100%;
         height: fit-content;
     }
 
-    .splide__track{
+    & .splide__track{
         border-radius: 12px 12px 0px 0px;
         height: fit-content;
     }
-    .splide__track{
-        img{
+    & .splide__track{
+        & img{
             width: 300px
 
            
         }
     }
 
-    .extra-content{
+    & .extra-content{
         display: flex;
         gap: 30px;
         flex-wrap: wrap;
@@ -477,7 +477,7 @@ body{
         border-radius: 0px 0px 12px 12px;
 
 
-        a{
+        & a{
             width: 150px;
             display: inline-block;
             padding: 0.5rem 1.8rem;
@@ -496,11 +496,11 @@ body{
             
             }
 
-        a:hover{
+        & a:hover{
             color: white;
             }
             
-        a:hover::before {
+        & a:hover::before {
         content: "";
         position: absolute;
         left: 0;
@@ -513,7 +513,7 @@ body{
         z-index: -1;
         }
         
-        a:hover::before {
+        & a:hover::before {
         transform: translateX(0);
         }
     }
@@ -548,16 +548,16 @@ body{
 @media (max-width: 1050px) {
 
     .page-content{
-        .breadcrumb-nav{
+        & .breadcrumb-nav{
             width: 100%;
             /* width: fit-content; */
 
            
         }
 
-        .filtered-content-container{
-            .filtered-content{
-                .filtered-card{
+        & .filtered-content-container{
+            & .filtered-content{
+                & .filtered-card{
                     width: 33.33333333%;
                 }
             }
@@ -581,12 +581,12 @@ body{
     text-align: center;
     align-items: center;
 
-    svg{
+    & svg{
         width: 70px;
         height: 70px;
         fill: var(--bs-red);
     }
-    button{
+    & button{
         background-color: transparent;
         border: none;
         margin-top: 20px;
@@ -595,17 +595,17 @@ body{
 }
 
 .no-content{
-    .special.hidden,
-    .regular.hidden{
+    & .special.hidden,
+    & .regular.hidden{
         display: none;
     }
 
-    .special{
+    & .special{
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        P{
+        & P{
             color: var(--bs-gray-dark);
             font-size: 22px;
             max-width: 350px;
@@ -613,14 +613,14 @@ body{
             padding: 0px 10px;
 
 
-            span{
+            & span{
                 /* font-size: 25px; */
                 color: var(--bs-primary);
                 font-weight: 600;
             }
         }
 
-        svg{
+        & svg{
             width: 150px;
             height: 150px;
             margin: auto;
@@ -652,7 +652,7 @@ body{
 
 
         
-        .breadcrumb-nav{
+        & .breadcrumb-nav{
             height: 0px;
             overflow: hidden;
             /* display: grid;
@@ -664,19 +664,20 @@ body{
             
         }
 
-        .breadcrumb-nav.show{
+        & .breadcrumb-nav.show{
             height: fit-content;
             padding: 20px 10px;
             padding-right: 0px;
+            overflow: unset;
         }
     }
 
     
 
     .page-content{
-        .filtered-content-container{
-            .filtered-content{
-                .filtered-card{
+        & .filtered-content-container{
+            & .filtered-content{
+                & .filtered-card{
                     width: 50%;
                 }
             }
@@ -697,12 +698,12 @@ body{
     
 .page-title{
 
-    p{
+    & p{
 
         font-size: 30px;
     }
 
-    span{
+    & span{
         max-width: 260px;
     }
 }
@@ -716,21 +717,21 @@ body{
 
 .page-content{
     
-    .breadcrumb-nav{
+    & .breadcrumb-nav{
        flex-direction: column;
        align-items: center;
 
-        .refinement{
+       & .refinement{
             max-width: 140px;
             margin: auto;
-            .label{
+            & .label{
                 font-size: 12px;
             }
         }
     }
-    .filtered-content-container{
-        .filtered-content{
-            .filtered-card{
+    & .filtered-content-container{
+        & .filtered-content{
+            & .filtered-card{
                 width: 100%;
             }
         }

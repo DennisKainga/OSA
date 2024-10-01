@@ -5,18 +5,18 @@
     min-height: 100vh;
     padding: 10px 20px;
 
-    .page-title{
+    & .page-title{
         width: fit-content;
         padding: 0px 10px;
         padding-bottom: 20px;
 
 
-        span{
+        & span{
             font-size: 40px;
             color: var(--bs-primary);
             /* text-decoration: underline; */
         }
-        .underline{
+        & .underline{
             width: 100%;
             height: 1.3px;
             background-color: var(--bs-primary);
@@ -34,19 +34,19 @@
     margin-top: 30px;
     padding: 0px 10px;
 
-    .filter-container{
+    & .filter-container{
         position: relative;
         min-width: 450px;
         max-width: 450px;
         width: fit-content;
 
-        .filter-btn-container{
+        & .filter-btn-container{
             display: flex;
             gap: 15px;
             min-width: 150px;
         }
 
-        button{
+        & button{
             width: 100%;
             cursor: pointer;
             border: 1px solid #dc354642;
@@ -60,26 +60,26 @@
             gap: 10px;
             color: var(--bs-primary);
 
-            svg{
+            & svg{
                 fill: var(--bs-primary);
                 transition: transform 100ms ease;
                 pointer-events: none;
 
             }
 
-            span{
+            & span{
                 pointer-events: none;
             }
 
         }
 
-        button.flip{
-            svg{
+        & button.flip{
+            & svg{
                 transform: rotate(180deg);
             }
         }
 
-        .filter-items{
+        & .filter-items{
             position: absolute;
             left: 0;
             top: 115%;
@@ -101,45 +101,45 @@
             pointer-events: none;
             
 
-            span{
+            & span{
                 cursor: pointer;
                 padding: 8px 10px;
                 color: var(--bs-gray);
 
             }
-            span:hover{
+            & span:hover{
                 background-color: #dc354617;
 
             }
         }
 
-        .filter-items.location{
+        & .filter-items.location{
             left: 50%;
         }
 
-        .filter-items.show{
+        & .filter-items.show{
             opacity: 1;
             pointer-events: all;
         }
     }
 
-    .input-container{
+    & .input-container{
         height: fit-content;
         width: 260px;
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #dc35466b;
         padding: 5px 0px;
-        input{
+        & input{
             border: none;
             outline: none;
             /* background-color: blue; */
         }
-        input::placeholder{
+        & input::placeholder{
             color: #dc354644;
         }
 
-        svg{
+        & svg{
             fill: #dc3546c4;
         }
     }
@@ -151,7 +151,7 @@
     margin-top: 40px;
     display: flex;
     gap: 20px;
-    .filter-chip{
+    & .filter-chip{
         background-color: #dc354609;
         border: none;
         padding: 15px 15px;
@@ -167,7 +167,7 @@
         
     }
 
-    .filter-chip.active{
+    & .filter-chip.active{
         color: var(--bs-white);
         background-color: #dc354644;
     }
@@ -183,7 +183,7 @@
 
 
 
-    .store-card {
+    & .store-card {
         position: relative;
         width: 20%;
         aspect-ratio: 1;
@@ -200,7 +200,7 @@
         transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
       }
 
-      .store-card .belt{
+      & .store-card .belt{
         position: absolute;
         left: 0;
         right: 0;
@@ -222,7 +222,7 @@
         
       }
 
-      .store-card img{
+      & .store-card img{
         width: 100%;
         object-fit: cover;
         height: 100%;
@@ -231,24 +231,24 @@
 
       }
       
-      .store-card svg {
+      & .store-card svg {
         width: 48px;
         fill: #333;
         transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
       }
       
-      .store-card:hover {
+      & .store-card:hover {
         transform: rotate(-5deg) scale(1.1);
         box-shadow: 0 10px 20px rgba(247, 114, 114, 0.2);
       }
 
-      .store-card:hover .belt{
+      & .store-card:hover .belt{
         opacity: 0;
   
 
       }
       
-      .store-card__content {
+      & .store-card__content {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -266,12 +266,12 @@
         
       }
       
-      .store-card:hover .store-card__content {
+      & .store-card:hover .store-card__content {
         transform: translate(-50%, -50%) rotate(0deg);
         opacity: 1;
       }
       
-      .store-card__title {
+      & .store-card__title {
         margin: 0 auto;
         font-size: 17px;
         color: #d23958c9;
@@ -281,23 +281,23 @@
         
       }
       
-      .store-card__description {
+      & .store-card__description {
         margin: 10px 0 0;
         font-size: 14px;
         color: #d23958;
         line-height: 1.4;
       }
       
-      .store-card:hover svg {
+      & .store-card:hover svg {
         scale: 0;
         transform: rotate(-45deg);
       }
       
 
-    .store-card:hover{
+      & .store-card:hover{
         transform: scale(1.05);
 
-        .overlay{
+        & .overlay{
             opacity: 1;
         }
     }
@@ -311,7 +311,7 @@
 
 @media (max-width: 1200px){
     .store-container{
-        .store-card{
+        & .store-card{
             width: 25%;
         }
         grid-template-columns: repeat(4, 1fr);
@@ -321,17 +321,17 @@
 @media (max-width: 810px){
 
     .page-content{
-        .filter-container{
+        & .filter-container{
             min-width: 0;
             max-width: 250px;
             /* margin: auto; */
 
     
-            .filter-btn-container{
+            & .filter-btn-container{
                 flex-direction: column;
             }
 
-            .filter-items.location{
+            & .filter-items.location{
                 left: 0;
             }
 
@@ -339,7 +339,7 @@
     }
 
     .store-container{
-        .store-card{
+        & .store-card{
             width: 50%;
         }
         grid-template-columns: repeat(3, 1fr);
@@ -358,24 +358,24 @@
 @media (max-width: 650px){
 
     .page-content{
-        .page-title{
+        & .page-title{
             width: 100%;
-            span{
+            & span{
                 font-size: 25px;
 
             }
-            .underline{
+            & .underline{
                 margin-top: -5px;
             }
         }
 
-        .filter-container{
+        & .filter-container{
             min-width: 0;
             max-width: 250px;
             margin: auto;
 
     
-            .filter-btn-container{
+            & .filter-btn-container{
                 flex-direction: column;
             }
 

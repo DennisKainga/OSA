@@ -8,7 +8,7 @@
     max-width: 100vw;
     
 
-    img{
+    & img{
         position: absolute;
         bottom: -2px;
         width: 100%;
@@ -188,7 +188,7 @@ nav{
 .collapsable-nav.show{
     
     height: 80px;
-    min-height: fit-content;
+    /* min-height: fit-content; */
 }
 .collapsable-nav.show a{
     font-weight: 600;
@@ -517,7 +517,7 @@ nav{
     background-size: contain;
   
 
-    .fc-left{
+    & .fc-left{
         position: relative;
         z-index: 2;
         /* width: 450px; */
@@ -525,7 +525,7 @@ nav{
         background-color: black;
     }
 
-    .fc-right{
+    & .fc-right{
         position: relative;
         z-index: 2;
         /* contain: inline-size; */
@@ -536,14 +536,14 @@ nav{
         text-wrap: wrap;
        
     }
-    p, h2, h4{
+    & p, & h2, & h4{
         color: var(--bs-white);
        
     }
-    p{
+    & p{
         font-size: 15px;
     }
-    button{
+    & button{
         opacity: 1;
         color: var(--bs-gray);
     }
@@ -567,7 +567,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 30px;
-    .store-card{
+    & .store-card{
         
         min-height: 0;
         max-height: fit-content;
@@ -577,11 +577,11 @@ nav{
        
 
     }
-    .store-card p{
+    & .store-card p{
         color: var(--bs-white);
         font-weight: 400;
     }
-    img{
+    & img{
         max-height: 280px;
         
     } 
@@ -594,7 +594,7 @@ nav{
     display: flex;
     align-items: center;
 
-    .text-light{
+    & .text-light{
         text-transform: uppercase;
 
     }
@@ -623,7 +623,7 @@ nav{
 
 @media(max-width: 810px){
     .Hero-pattern{
-        img{
+        & img{
             height: 100px;
         }
     }
@@ -670,13 +670,13 @@ nav{
         padding-top: 60px;
         grid-template-columns: repeat(1, 1fr);
         margin: 0;
-        .fc-left{
+        & .fc-left{
             width: 100%;
         }
-        .fc-right{
+        & .fc-right{
             /* contain: inline-size; */
             padding: 0px 30px;
-            p{
+            & p{
                 font-size: 13px;
             }
             
@@ -694,7 +694,7 @@ nav{
 
 @media(max-width: 450px){
     .Hero-pattern{
-        img{
+        & img{
             height: 50px;
         }
     }

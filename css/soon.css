@@ -19,7 +19,7 @@ body{
 
 
 
-    .filter-container{
+    & .filter-container{
         position: absolute;
         top: 0;
         left: 0;
@@ -28,7 +28,7 @@ body{
         z-index: 0;
         /* backdrop-filter: blur(5px); */
     }
-    .background{
+    & .background{
         position: absolute;
         height: 100%;
         width: 100%;
@@ -36,7 +36,7 @@ body{
         left: 0;
 
 
-        .wave {
+        & .wave {
             background: rgb(255 255 255 / 25%);
             border-radius: 1000% 1000% 0 0;
             position: fixed;
@@ -52,21 +52,21 @@ body{
             
         }
         
-        .wave:nth-of-type(2) {
+        & .wave:nth-of-type(2) {
             bottom: -1.25em;
             animation: wave 18s linear reverse infinite;
             opacity: 0.8;
 
         }
         
-        .wave:nth-of-type(3) {
+        & .wave:nth-of-type(3) {
             bottom: -2.5em;
             animation: wave 20s -1s reverse infinite;
             opacity: 0.9;
 
         }
     }
-    nav{
+    & nav{
         width: 100%;
         display: flex;
         justify-content: end;
@@ -75,20 +75,20 @@ body{
         min-height: 77px;
 
     
-        a{
+        & a{
             color: white;
             font-size: 14px;
 
         }
     }
 
-    .central-outer{
+    & .central-outer{
         width: 100%;
         height: calc(100vh - 77px);
         display: grid;
         place-content: center;
     }
-    .central{
+    & .central{
         position: relative;
         z-index: 10;
         text-align: center;
@@ -98,13 +98,13 @@ body{
         gap: 10px;
         min-height: 540px;
 
-        h1{
+        & h1{
             font-size: 65px;
             color: var(--bs-white);
             opacity: .9;
         }
 
-        .ready-text{
+        & .ready-text{
             width: 100%;
             color: rgba(255, 255, 255, 0.863);
             font-size: 15px;
@@ -112,20 +112,20 @@ body{
             
         }
 
-        .progress-bar-outer{
+        & .progress-bar-outer{
             width: 60%;
             margin: auto;
             background-color: rgba(255, 255, 255, 0.671);
             height: 8px;
 
-            .progress-bar{
+            & .progress-bar{
                 width: 70%;
                 background-color:  #df6d8473  ;
                 height: 100%;
             }
         }
 
-        .bottom-text{
+        & .bottom-text{
             width: 60%;
             margin: auto;
             margin-top: 10px;
@@ -136,7 +136,7 @@ body{
             
         }
 
-        button{
+        & button{
             width: 150px;
             margin: 30px auto;
             background-color:  #dd627b;
@@ -147,14 +147,14 @@ body{
             font-size: 14px;
         }
 
-        .socials{
+        & .socials{
             display: flex;
             gap: 25px;
             margin: auto;
             width: fit-content;
             margin-top: 80px;
 
-            a{
+            & a{
                 border: 1px solid rgba(255, 255, 255, 0.904);
                 color: rgba(255, 255, 255, 0.904);
                 /* transform: scale(1.2); */
@@ -162,13 +162,13 @@ body{
                 width: 50px;
             }
 
-            a:hover{
+            & a:hover{
                 background-color: white;
                 color: #df6d8457;
             }
         }
 
-        .rights{
+        & .rights{
             color:rgba(255, 255, 255, 0.904) ;
             margin-top: 20px;
             font-size: 13px;
@@ -218,9 +218,9 @@ body{
 @media (max-width: 580px) {
 
     .main{
-        .central-outer{
-            .central{
-                h1{
+        & .central-outer{
+            & .central{
+                & h1{
                     font-size: 50px;
                 }
             }
@@ -233,26 +233,26 @@ body{
 
     .main{
 
-        nav{
-            .navbar-links{
+        & nav{
+            & .navbar-links{
                 width: 100%;
                 justify-content: center;
                 flex-direction: row;
                 font-size: 8px;
 
-                .nav-link{
+                & .nav-link{
                     padding: 10px 5px;
                 }
             }
         }
-        .central-outer{
-            .central{
-                h1{
+        & .central-outer{
+            & .central{
+                & h1{
                     font-size: 35px;
                 }
 
-                .socials{
-                    a{
+                & .socials{
+                    & a{
                         width: 40px;
                         height: 40px;
                     }
