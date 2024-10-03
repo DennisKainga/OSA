@@ -8,13 +8,15 @@
     max-width: 100vw;
     
 
-    & img{
-        position: absolute;
-        bottom: -2px;
-        width: 100%;
-        height: 120px;
-        
-    }
+}
+
+
+.Hero-pattern img{
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 120px;
+    
 }
 
 .bg-background{
@@ -515,39 +517,39 @@ nav{
     gap: 35px;
     background-image: url("../img/langata/18.HEIC") ;
     background-size: contain;
+}
+
   
 
-    & .fc-left{
-        position: relative;
-        z-index: 2;
-        /* width: 450px; */
-        height: 400px;
-        background-color: black;
-    }
+.fun-card .fc-left{
+    position: relative;
+    z-index: 2;
+    /* width: 450px; */
+    height: 400px;
+    background-color: black;
+}
 
-    & .fc-right{
-        position: relative;
-        z-index: 2;
-        /* contain: inline-size; */
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        /* width: 450px; */
-        text-wrap: wrap;
-       
-    }
-    & p, & h2, & h4{
-        color: var(--bs-white);
-       
-    }
-    & p{
-        font-size: 15px;
-    }
-    & button{
-        opacity: 1;
-        color: var(--bs-gray);
-    }
-    
+.fun-card .fc-right{
+    position: relative;
+    z-index: 2;
+    /* contain: inline-size; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* width: 450px; */
+    text-wrap: wrap;
+   
+}
+.fun-card p, .fun-card h2, .fun-card h4{
+    color: var(--bs-white);
+   
+}
+.fun-card p{
+    font-size: 15px;
+}
+.fun-card button{
+    opacity: 1;
+    color: var(--bs-gray);
 }
 
 .fc-bg{
@@ -567,25 +569,26 @@ nav{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 30px;
-    & .store-card{
-        
-        min-height: 0;
-        max-height: fit-content;
-        min-width: 0;
-        max-width: 100%;
-        background-color: var(--bs-red);
-       
-
-    }
-    & .store-card p{
-        color: var(--bs-white);
-        font-weight: 400;
-    }
-    & img{
-        max-height: 280px;
-        
-    } 
 }
+
+.store-cards.second .store-card{
+        
+    min-height: 0;
+    max-height: fit-content;
+    min-width: 0;
+    max-width: 100%;
+    background-color: var(--bs-red);
+   
+
+}
+.store-cards.second .store-card p{
+    color: var(--bs-white);
+    font-weight: 400;
+}
+.store-cards.second img{
+    max-height: 280px;
+    
+} 
 
 .container-fluid.bg-light.service{
     background-color: white;
@@ -594,13 +597,15 @@ nav{
     display: flex;
     align-items: center;
 
-    & .text-light{
-        text-transform: uppercase;
-
-    }
 
 
 }
+
+.container-fluid.bg-light.service .text-light{
+    text-transform: uppercase;
+
+}
+
 @media(max-width: 1040px){
     .carousel-nav-link span{
         font-size: 14px;
@@ -622,11 +627,11 @@ nav{
 }
 
 @media(max-width: 810px){
-    .Hero-pattern{
-        & img{
-            height: 100px;
-        }
+
+    .Hero-pattern img{
+        height: 100px;
     }
+    
     #navbar .socials{
         display: none;
         width: 50px;
@@ -670,17 +675,18 @@ nav{
         padding-top: 60px;
         grid-template-columns: repeat(1, 1fr);
         margin: 0;
-        & .fc-left{
-            width: 100%;
-        }
-        & .fc-right{
-            /* contain: inline-size; */
-            padding: 0px 30px;
-            & p{
-                font-size: 13px;
-            }
-            
-        }
+    }
+
+    .fun-card .fc-left{
+        width: 100%;
+    }
+    .fun-card .fc-right{
+        /* contain: inline-size; */
+        padding: 0px 30px;
+    }
+
+    .fun-card .fc-right p{
+        font-size: 13px;
     }
    
 }

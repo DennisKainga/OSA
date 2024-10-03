@@ -39,6 +39,10 @@
     background-color: #ed38659a;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .Hero-pattern{
     background-image: url("../img/langata/11.jpg");
     background-size: cover;
@@ -48,49 +52,49 @@
     overflow: hidden;
     width: 100%;
     max-width: 100vw;
+}
+
     
-    & .main-hero-img{
-        object-fit:contain;
-        max-height: 100vh;
-        width: 100%;
-        height: 100%;
-        position: static;
-        display: none;
-    }
+.Hero-pattern .main-hero-img{
+    object-fit:contain;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: static;
+    display: none;
+}
 
-    & .hero-curve{
-        left: 0;
-        position: absolute;
-        bottom: -2px;
-        width: 100%;
-        height: 120px;
-        
-    }
+.Hero-pattern .hero-curve{
+    left: 0;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 120px;
+    
+}
 
-    & .page-title{
-        position: absolute;
-        left: 0;
-        top: 0;
-        /* transform: translate(-50%, 50%); */
-        width: 100%;
-        height: 100%;
-        font-size: 50px;
-     
-        padding: 10px;
-        background-color: #dc354625;
-        text-align: center;
-        display: grid;
-        place-content: center;
-        /* display: none; */
-        
-    }
-    & .page-title span{
-        color: rgba(255, 255, 255, 0.87);
-        /* margin-top: 40%; */
-        background-color: rgba(255, 255, 255, 0.288);
-        padding: 10px 20px;
-        
-    }
+.Hero-pattern .page-title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* transform: translate(-50%, 50%); */
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+ 
+    padding: 10px;
+    background-color: #dc354625;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    /* display: none; */
+    
+}
+.Hero-pattern .page-title span{
+    color: rgba(255, 255, 255, 0.87);
+    /* margin-top: 40%; */
+    background-color: rgba(255, 255, 255, 0.288);
+    padding: 10px 20px;
     
 }
 
@@ -387,85 +391,84 @@ nav{
     display: none;
 }
 
-.footer-cta{
-    & h5{
-        display: flex;
-        gap: 15px;
+.footer-cta h5{
+    display: flex;
+    gap: 15px;
 
-        & svg{
-            fill: white;
-            /* background-color: var(--bs-primary); */
-        }
-    }
+}
 
-    & input{
-        background-color: transparent;
-        padding: 10px 20px;
-        border: none;
-        border-bottom: 1px solid grey;
-        color: white;
-    }
 
-    & input::placeholder{
-        font-size: 16px;
-        color: white;
-    }
+.footer-cta h5 svg{
+    fill: white;
+    /* background-color: var(--bs-primary); */
+}
 
-     /* From Uiverse.io by satyamchaudharydev */ 
-     & .input-box {
-        --width-of-input: 100%;
-        --border-height: 1px;
-        --border-before-color: rgba(221, 221, 221, 0.39);
-        --border-after-color: white;
-        --input-hovered-color: #d239580e;
-        position: relative;
-        width: var(--width-of-input);
-    }
-   /* styling of Input */
-   & .input {
-    color: white;
-    font-size: 0.9rem;
+.footer-cta input{
     background-color: transparent;
-    width: 100%;
-    box-sizing: border-box;
-    padding-inline: 0.5em;
-    padding-block: 0.7em;
+    padding: 10px 20px;
     border: none;
-    border-bottom: var(--border-height) solid var(--border-before-color);
-   }
+    border-bottom: 1px solid grey;
+    color: white;
+}
 
-   & .input::placeholder{
-    opacity: 0.9;
-   }
-   /* styling of animated border */
-   & .input-border {
-    position: absolute;
-    background: var(--border-after-color);
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    transition: 0.3s;
-   }
-   
-   & input:focus {
-    outline: none;
-   }
-   /* here is code of animated border */
-   & input:focus ~ .input-border {
-    width: 100%;
-   }
+.footer-cta input::placeholder{
+    font-size: 16px;
+    color: white;
+}
 
-   & .cta-btn{
-    margin-top: 40px;
-    border: none;
-    padding: 15px 30px;
-    font-size: 17px;
-    width: 180px;
-    background-color: var(--bs-primary);
-    color: var(--bs-white);
-   }
+ /* From Uiverse.io by satyamchaudharydev */ 
+.footer-cta .input-box {
+    --width-of-input: 100%;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: white;
+    --input-hovered-color: #d239580e;
+    position: relative;
+    width: var(--width-of-input);
+}
+/* styling of Input */
+.footer-cta .input {
+color: white;
+font-size: 0.9rem;
+background-color: transparent;
+width: 100%;
+box-sizing: border-box;
+padding-inline: 0.5em;
+padding-block: 0.7em;
+border: none;
+border-bottom: var(--border-height) solid var(--border-before-color);
+}
 
+.footer-cta .input::placeholder{
+opacity: 0.9;
+}
+/* styling of animated border */
+.footer-cta .input-border {
+position: absolute;
+background: var(--border-after-color);
+width: 0%;
+height: 2px;
+bottom: 0;
+left: 0;
+transition: 0.3s;
+}
+
+.footer-cta input:focus {
+outline: none;
+}
+/* here is code of animated border */
+.footer-cta input:focus ~ .input-border {
+width: 100%;
+}
+
+.footer-cta .cta-btn{
+margin-top: 40px;
+border: none;
+padding: 15px 30px;
+font-size: 17px;
+width: 180px;
+background-color: var(--bs-primary);
+color: var(--bs-white);
 }
 
 @keyframes slide-up {
@@ -561,20 +564,22 @@ nav{
         padding-top: 60px;
         grid-template-columns: repeat(1, 1fr);
         margin: 0;
-        & .fc-left{
-            width: 100%;
-            height: 100%;
+    }
 
-            
-        }
-        & .fc-right{
-            /* contain: inline-size; */
-            padding: 0px 30px;
-            & p{
-                font-size: 13px;
-            }
-            
-        }
+    .fun-card-inner .fc-left{
+        width: 100%;
+        height: 100%;
+
+        
+    }
+    .fun-card-inner .fc-right{
+        /* contain: inline-size; */
+        padding: 0px 30px;
+
+        
+    }
+    .fun-card-inner .fc-right p{
+        font-size: 13px;
     }
    
 }
@@ -585,16 +590,18 @@ nav{
     .Hero-pattern{
         background-image: none;
         height:fit-content;
-        & .hero-curve{
-            height: 100px;
-        }
-
-        & .main-hero-img{
-            display: block;
-            
-    
-        }
     }
+
+    .Hero-pattern .hero-curve{
+        height: 100px;
+    }
+
+    .Hero-pattern .main-hero-img{
+        display: block;
+        
+
+    }
+
     .store-cards.second {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -602,14 +609,12 @@ nav{
 
 
 @media(max-width: 450px){
-    .Hero-pattern{
-        & .hero-curve{
-            height: 50px;
-        }
+    .Hero-pattern .hero-curve{
+        height: 50px;
+    }
 
-        & .page-title span{
-            font-size: 20px;
-        }
+    .Hero-pattern .page-title span{
+        font-size: 20px;
     }
     
     #navbar{
@@ -633,11 +638,10 @@ nav{
         bottom: 0;
         /* background-color: red; */
         z-index: 10;
+    }
 
-        & li[data-bs-target]{
-            background-color: var(--bs-gray-dark);
-        }
-
+    .carousel-indicators li[data-bs-target]{
+        background-color: var(--bs-gray-dark);
     }
 
     .collapsable-nav.show{
