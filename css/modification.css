@@ -587,6 +587,20 @@ color: var(--bs-white);
 
 
 @media(max-width: 650px){
+
+    .collapsable-nav a{
+        border-bottom: 1px solid grey;
+        text-align: center;
+    }
+    
+    .collapsable-nav.show{
+        height: 269px;
+    }
+
+    .navbar-links{
+        flex-direction: column;
+        /* background-color: var(--bs-white); */
+    }
     .Hero-pattern{
         background-image: none;
         height:fit-content;
@@ -642,20 +656,6 @@ color: var(--bs-white);
 
     .carousel-indicators li[data-bs-target]{
         background-color: var(--bs-gray-dark);
-    }
-
-    .collapsable-nav.show{
-        height: 269px;
-    }
-
-    .collapsable-nav a{
-        border-bottom: 1px solid grey;
-        text-align: center;
-    }
-
-    .navbar-links{
-        flex-direction: column;
-        /* background-color: var(--bs-white); */
     }
 
     .collapable-socials{

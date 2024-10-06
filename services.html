@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Travela - Tourism Website Template</title>
+        <title>OSA - Services</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -27,6 +27,8 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/modification.css">
+        <link rel="stylesheet" href="css/services.css">
     </head>
 
     <body>
@@ -39,426 +41,184 @@
         </div>
         <!-- Spinner End -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
-            <div class="row gx-0">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+               <!-- Navbar start -->
+        <nav>
+            <div class="nav-inner">
+            <div id="navbar">
+                <div class="burger-outer">
+                    <div class="burger">
+                        <label class="hamburger">
+                            <input type="checkbox" autocomplete="off">
+                            <svg viewBox="0 0 32 32" class="hamburger-svg">
+                            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                            <path class="line" d="M7 16 27 16"></path>
+                            </svg> <span> 
+                        </label>
+                        <span>MENU</span>
                     </div>
+                </div>  
+                <div class="brand-logo">
+                    <a href="index.html">
+                        <img loading="lazy"  src="img/OSA_white.jpeg" alt="" srcset="">
+                    </a>
                 </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="socials">
+                    <a class=" btn-outline-primary btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/onestop_arcade_langata.rd/"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class=" btn-outline-primary btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/onestop_arcade_langata.rd/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class=" btn-outline-primary btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/onestop_arcade_langata.rd/"><i class="fab fa-instagram fw-normal"></i></a>
+                    <button class="cta">
+                        <a href="contact.html">
+                            <span class="hover-underline-animation"> CONTACT US </span>
+                            <svg
+                            id="arrow-horizontal"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="10"
+                            viewBox="0 0 46 16"
+                            >
+                            <path
+                                id="Path_10"
+                                data-name="Path 10"
+                                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"
+                            ></path>
+                            </svg> <span> 
+                        </a>
+                    </button>
+                    
                 </div>
             </div>
-        </div>
-        <!-- Topbar End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Travela</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="services.html" class="nav-item nav-link active">Services</a>
-                        <a href="packages.html" class="nav-item nav-link">Packages</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="tour.html" class="dropdown-item">Explore Tour</a>
-                                <a href="booking.html" class="dropdown-item">Travel Booking</a>
-                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
-                                <a href="guides.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+            <div class="collapsable-nav">
+                <div class="navbar-links">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="stores.html" class="nav-item nav-link">Stores</a>
+                    <a href="shop-to-let.html" class="nav-item nav-link">Shops To Let</a>
+                    <a href="services.html" class="nav-item nav-link">Services</a>
+                    <a href="#" class="nav-item nav-link">Events</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4">Our Services</h1>
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-white">Services</li>
-                </ol>    
-            </div>
-        </div>
-        <!-- Header End -->
-
-        <!-- Services Start -->
-        <div class="container-fluid bg-light service py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Searvices</h5>
-                    <h1 class="mb-0">Our Services</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Service More</a>
-                        </div>
-                    </div>
+                <div class="collapable-socials"> 
+                    <a class=" btn-outline-primary btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/onestop_arcade_langata.rd/"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class=" btn-outline-primary btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/onestop_arcade_langata.rd/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class=" btn-outline-primary btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/onestop_arcade_langata.rd/"><i class="fab fa-instagram fw-normal"></i></a>
                 </div>
             </div>
-        </div>
-        <!-- Services End -->
+            </div>
+        </nav>
+        <!-- Navbar end -->
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Testimonial</h5>
-                    <h1 class="mb-0">Our Clients Say!!!</h1>
-                </div>
-                <div class="testimonial-carousel owl-carousel">
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center rounded pb-4">
-                        <div class="testimonial-comment bg-light rounded p-4">
-                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
-                            </p>
-                        </div>
-                        <div class="testimonial-img p-1">
-                            <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle" alt="Image">
-                        </div>
-                        <div style="margin-top: -35px;">
-                            <h5 class="mb-0">John Abraham</h5>
-                            <p class="mb-0">New York, USA</p>
-                            <div class="d-flex justify-content-center">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="hero">
+            <div class="hero-text animatable-img">
+                <h1 class="hero-text">Parking. Shoping. Peace of Mind.</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos at illum vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates adipisci aperiam, non laudantium laboriosam quia!</p>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+            <img class="hero-bg animatable-img" src="img/Nyari/perspective.png" alt="hero-img">
+            <!-- <div class="pattern-hero-bg">
+                <img class="hero-curve" src="img/hero-curve.png" alt="" srcset="">
+            </div> -->
+        </div>
+
+        <div class="services-text">
+            <div class="cards-title">
+                <h1>Our Service Feature</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae commodi eum officiis! Ducimus, molestiae. Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="service-cards">
+            <div class="card animatable-img">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 74.06"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>housing</title><path class="cls-1" d="M115.5,70v2.74a1.28,1.28,0,0,1-1.28,1.28H80a7.33,7.33,0,0,0,.14-1.41V71.5h4.16V44.79a1.26,1.26,0,0,1,1.24-1.28h15.32a1.26,1.26,0,0,1,1.25,1.28V71.5h10.86V38.69a2.11,2.11,0,0,1,0-.25L86.38,18l-5,2.9-8.57-6.66L85.28,5.38a1.29,1.29,0,0,1,1.66-.07l34,26.25h0l.15.14a5.74,5.74,0,0,1,1.63,5.3,4.9,4.9,0,0,1-1.11,2.13,4.84,4.84,0,0,1-2,1.34,5.38,5.38,0,0,1-4.15-.27V70Zm-42-.4v3A1.41,1.41,0,0,1,72,74.06H9.13a1.41,1.41,0,0,1-1.4-1.41V37.7a6.27,6.27,0,0,1-4.26.2,4.91,4.91,0,0,1-2.35-1.65A5.13,5.13,0,0,1,0,33.6a6.67,6.67,0,0,1,1.61-4.94h0a1.25,1.25,0,0,1,.23-.23L39.25.37A1.39,1.39,0,0,1,41.06.3l38.39,28h0a.8.8,0,0,1,.17.15,6.3,6.3,0,0,1,1.79,5.83,5.39,5.39,0,0,1-1.22,2.33A5.24,5.24,0,0,1,78,38.08a5.87,5.87,0,0,1-4.56-.29V69.64ZM16.85,50.52H30.74A1.25,1.25,0,0,1,32,51.77v12A1.24,1.24,0,0,1,30.74,65H16.85a1.25,1.25,0,0,1-1.27-1.24v-12a1.26,1.26,0,0,1,1.27-1.25Zm22.65-9H56.33a1.39,1.39,0,0,1,1.36,1.41V71.25h13V36.13a2.45,2.45,0,0,1,0-.27L40.45,14.22l-30,21.65a1.5,1.5,0,0,1,0,.37v35h27.6V42.92a1.39,1.39,0,0,1,1.36-1.41ZM55,44.33H40.87V71.22H55V44.33Zm44.63,1.74H86.76v25.4H99.59V46.07Z"/></svg>
+                <h4>Property Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam adipisci quidem illo.</p>
+            </div>
+            <div class="card animatable-img">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 74.06"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>housing</title><path class="cls-1" d="M115.5,70v2.74a1.28,1.28,0,0,1-1.28,1.28H80a7.33,7.33,0,0,0,.14-1.41V71.5h4.16V44.79a1.26,1.26,0,0,1,1.24-1.28h15.32a1.26,1.26,0,0,1,1.25,1.28V71.5h10.86V38.69a2.11,2.11,0,0,1,0-.25L86.38,18l-5,2.9-8.57-6.66L85.28,5.38a1.29,1.29,0,0,1,1.66-.07l34,26.25h0l.15.14a5.74,5.74,0,0,1,1.63,5.3,4.9,4.9,0,0,1-1.11,2.13,4.84,4.84,0,0,1-2,1.34,5.38,5.38,0,0,1-4.15-.27V70Zm-42-.4v3A1.41,1.41,0,0,1,72,74.06H9.13a1.41,1.41,0,0,1-1.4-1.41V37.7a6.27,6.27,0,0,1-4.26.2,4.91,4.91,0,0,1-2.35-1.65A5.13,5.13,0,0,1,0,33.6a6.67,6.67,0,0,1,1.61-4.94h0a1.25,1.25,0,0,1,.23-.23L39.25.37A1.39,1.39,0,0,1,41.06.3l38.39,28h0a.8.8,0,0,1,.17.15,6.3,6.3,0,0,1,1.79,5.83,5.39,5.39,0,0,1-1.22,2.33A5.24,5.24,0,0,1,78,38.08a5.87,5.87,0,0,1-4.56-.29V69.64ZM16.85,50.52H30.74A1.25,1.25,0,0,1,32,51.77v12A1.24,1.24,0,0,1,30.74,65H16.85a1.25,1.25,0,0,1-1.27-1.24v-12a1.26,1.26,0,0,1,1.27-1.25Zm22.65-9H56.33a1.39,1.39,0,0,1,1.36,1.41V71.25h13V36.13a2.45,2.45,0,0,1,0-.27L40.45,14.22l-30,21.65a1.5,1.5,0,0,1,0,.37v35h27.6V42.92a1.39,1.39,0,0,1,1.36-1.41ZM55,44.33H40.87V71.22H55V44.33Zm44.63,1.74H86.76v25.4H99.59V46.07Z"/></svg>
+                <h4>Property Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam adipisci quidem illo.</p>
+            </div>
+            <div class="card animatable-img">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 74.06"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>housing</title><path class="cls-1" d="M115.5,70v2.74a1.28,1.28,0,0,1-1.28,1.28H80a7.33,7.33,0,0,0,.14-1.41V71.5h4.16V44.79a1.26,1.26,0,0,1,1.24-1.28h15.32a1.26,1.26,0,0,1,1.25,1.28V71.5h10.86V38.69a2.11,2.11,0,0,1,0-.25L86.38,18l-5,2.9-8.57-6.66L85.28,5.38a1.29,1.29,0,0,1,1.66-.07l34,26.25h0l.15.14a5.74,5.74,0,0,1,1.63,5.3,4.9,4.9,0,0,1-1.11,2.13,4.84,4.84,0,0,1-2,1.34,5.38,5.38,0,0,1-4.15-.27V70Zm-42-.4v3A1.41,1.41,0,0,1,72,74.06H9.13a1.41,1.41,0,0,1-1.4-1.41V37.7a6.27,6.27,0,0,1-4.26.2,4.91,4.91,0,0,1-2.35-1.65A5.13,5.13,0,0,1,0,33.6a6.67,6.67,0,0,1,1.61-4.94h0a1.25,1.25,0,0,1,.23-.23L39.25.37A1.39,1.39,0,0,1,41.06.3l38.39,28h0a.8.8,0,0,1,.17.15,6.3,6.3,0,0,1,1.79,5.83,5.39,5.39,0,0,1-1.22,2.33A5.24,5.24,0,0,1,78,38.08a5.87,5.87,0,0,1-4.56-.29V69.64ZM16.85,50.52H30.74A1.25,1.25,0,0,1,32,51.77v12A1.24,1.24,0,0,1,30.74,65H16.85a1.25,1.25,0,0,1-1.27-1.24v-12a1.26,1.26,0,0,1,1.27-1.25Zm22.65-9H56.33a1.39,1.39,0,0,1,1.36,1.41V71.25h13V36.13a2.45,2.45,0,0,1,0-.27L40.45,14.22l-30,21.65a1.5,1.5,0,0,1,0,.37v35h27.6V42.92a1.39,1.39,0,0,1,1.36-1.41ZM55,44.33H40.87V71.22H55V44.33Zm44.63,1.74H86.76v25.4H99.59V46.07Z"/></svg>
+                <h4>Property Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam adipisci quidem illo.</p>
+            </div>
+            <div class="card animatable-img">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 74.06"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>housing</title><path class="cls-1" d="M115.5,70v2.74a1.28,1.28,0,0,1-1.28,1.28H80a7.33,7.33,0,0,0,.14-1.41V71.5h4.16V44.79a1.26,1.26,0,0,1,1.24-1.28h15.32a1.26,1.26,0,0,1,1.25,1.28V71.5h10.86V38.69a2.11,2.11,0,0,1,0-.25L86.38,18l-5,2.9-8.57-6.66L85.28,5.38a1.29,1.29,0,0,1,1.66-.07l34,26.25h0l.15.14a5.74,5.74,0,0,1,1.63,5.3,4.9,4.9,0,0,1-1.11,2.13,4.84,4.84,0,0,1-2,1.34,5.38,5.38,0,0,1-4.15-.27V70Zm-42-.4v3A1.41,1.41,0,0,1,72,74.06H9.13a1.41,1.41,0,0,1-1.4-1.41V37.7a6.27,6.27,0,0,1-4.26.2,4.91,4.91,0,0,1-2.35-1.65A5.13,5.13,0,0,1,0,33.6a6.67,6.67,0,0,1,1.61-4.94h0a1.25,1.25,0,0,1,.23-.23L39.25.37A1.39,1.39,0,0,1,41.06.3l38.39,28h0a.8.8,0,0,1,.17.15,6.3,6.3,0,0,1,1.79,5.83,5.39,5.39,0,0,1-1.22,2.33A5.24,5.24,0,0,1,78,38.08a5.87,5.87,0,0,1-4.56-.29V69.64ZM16.85,50.52H30.74A1.25,1.25,0,0,1,32,51.77v12A1.24,1.24,0,0,1,30.74,65H16.85a1.25,1.25,0,0,1-1.27-1.24v-12a1.26,1.26,0,0,1,1.27-1.25Zm22.65-9H56.33a1.39,1.39,0,0,1,1.36,1.41V71.25h13V36.13a2.45,2.45,0,0,1,0-.27L40.45,14.22l-30,21.65a1.5,1.5,0,0,1,0,.37v35h27.6V42.92a1.39,1.39,0,0,1,1.36-1.41ZM55,44.33H40.87V71.22H55V44.33Zm44.63,1.74H86.76v25.4H99.59V46.07Z"/></svg>
+                <h4>Property Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam adipisci quidem illo.</p>
+            </div>
+            <div class="card animatable-img">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 74.06"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>housing</title><path class="cls-1" d="M115.5,70v2.74a1.28,1.28,0,0,1-1.28,1.28H80a7.33,7.33,0,0,0,.14-1.41V71.5h4.16V44.79a1.26,1.26,0,0,1,1.24-1.28h15.32a1.26,1.26,0,0,1,1.25,1.28V71.5h10.86V38.69a2.11,2.11,0,0,1,0-.25L86.38,18l-5,2.9-8.57-6.66L85.28,5.38a1.29,1.29,0,0,1,1.66-.07l34,26.25h0l.15.14a5.74,5.74,0,0,1,1.63,5.3,4.9,4.9,0,0,1-1.11,2.13,4.84,4.84,0,0,1-2,1.34,5.38,5.38,0,0,1-4.15-.27V70Zm-42-.4v3A1.41,1.41,0,0,1,72,74.06H9.13a1.41,1.41,0,0,1-1.4-1.41V37.7a6.27,6.27,0,0,1-4.26.2,4.91,4.91,0,0,1-2.35-1.65A5.13,5.13,0,0,1,0,33.6a6.67,6.67,0,0,1,1.61-4.94h0a1.25,1.25,0,0,1,.23-.23L39.25.37A1.39,1.39,0,0,1,41.06.3l38.39,28h0a.8.8,0,0,1,.17.15,6.3,6.3,0,0,1,1.79,5.83,5.39,5.39,0,0,1-1.22,2.33A5.24,5.24,0,0,1,78,38.08a5.87,5.87,0,0,1-4.56-.29V69.64ZM16.85,50.52H30.74A1.25,1.25,0,0,1,32,51.77v12A1.24,1.24,0,0,1,30.74,65H16.85a1.25,1.25,0,0,1-1.27-1.24v-12a1.26,1.26,0,0,1,1.27-1.25Zm22.65-9H56.33a1.39,1.39,0,0,1,1.36,1.41V71.25h13V36.13a2.45,2.45,0,0,1,0-.27L40.45,14.22l-30,21.65a1.5,1.5,0,0,1,0,.37v35h27.6V42.92a1.39,1.39,0,0,1,1.36-1.41ZM55,44.33H40.87V71.22H55V44.33Zm44.63,1.74H86.76v25.4H99.59V46.07Z"/></svg>
+                <h4>Property Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam adipisci quidem illo.</p>
+            </div>
+            <div class="card animatable-img">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 74.06"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>housing</title><path class="cls-1" d="M115.5,70v2.74a1.28,1.28,0,0,1-1.28,1.28H80a7.33,7.33,0,0,0,.14-1.41V71.5h4.16V44.79a1.26,1.26,0,0,1,1.24-1.28h15.32a1.26,1.26,0,0,1,1.25,1.28V71.5h10.86V38.69a2.11,2.11,0,0,1,0-.25L86.38,18l-5,2.9-8.57-6.66L85.28,5.38a1.29,1.29,0,0,1,1.66-.07l34,26.25h0l.15.14a5.74,5.74,0,0,1,1.63,5.3,4.9,4.9,0,0,1-1.11,2.13,4.84,4.84,0,0,1-2,1.34,5.38,5.38,0,0,1-4.15-.27V70Zm-42-.4v3A1.41,1.41,0,0,1,72,74.06H9.13a1.41,1.41,0,0,1-1.4-1.41V37.7a6.27,6.27,0,0,1-4.26.2,4.91,4.91,0,0,1-2.35-1.65A5.13,5.13,0,0,1,0,33.6a6.67,6.67,0,0,1,1.61-4.94h0a1.25,1.25,0,0,1,.23-.23L39.25.37A1.39,1.39,0,0,1,41.06.3l38.39,28h0a.8.8,0,0,1,.17.15,6.3,6.3,0,0,1,1.79,5.83,5.39,5.39,0,0,1-1.22,2.33A5.24,5.24,0,0,1,78,38.08a5.87,5.87,0,0,1-4.56-.29V69.64ZM16.85,50.52H30.74A1.25,1.25,0,0,1,32,51.77v12A1.24,1.24,0,0,1,30.74,65H16.85a1.25,1.25,0,0,1-1.27-1.24v-12a1.26,1.26,0,0,1,1.27-1.25Zm22.65-9H56.33a1.39,1.39,0,0,1,1.36,1.41V71.25h13V36.13a2.45,2.45,0,0,1,0-.27L40.45,14.22l-30,21.65a1.5,1.5,0,0,1,0,.37v35h27.6V42.92a1.39,1.39,0,0,1,1.36-1.41ZM55,44.33H40.87V71.22H55V44.33Zm44.63,1.74H86.76v25.4H99.59V46.07Z"/></svg>
+                <h4>Property Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam adipisci quidem illo.</p>
             </div>
         </div>
-        <!-- Testimonial End -->
 
-        <!-- Subscribe Start -->
-        <div class="container-fluid subscribe py-5">
-            <div class="container text-center py-5">
-                <div class="mx-auto text-center" style="max-width: 900px;">
-                    <h5 class="subscribe-title px-3">Subscribe</h5>
-                    <h1 class="text-white mb-4">Our Newsletter</h1>
-                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
-                    </p>
-                    <div class="position-relative mx-auto">
-                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Subscribe End -->
-
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <div class="row gy-3 gx-2 mb-4">
-                                <div class="col-xl-6">
-                                    <form>
-                                        <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
-                                            </select>
-                                            <label for="select1">English</label>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-xl-6">
-                                    <form>
-                                        <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
-                                            </select>
-                                            <label for="select1">$</label>
-                                        </div>
-                                    </form>
+                <!-- Footer Start -->
+                <div class="container-fluid footer py-5">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item d-flex flex-column">
+                                    <h4 class="mb-4 text-white">Get In Touch</h4>
+                                    <a href=""><i class="fas fa-home me-2"></i> Karen, Nairobi, Kenya</a>
+                                    <a href=""><i class="fas fa-envelope me-2"></i> info@onestoparcade.com</a>
+                                    <a href=""><i class="fas fa-phone me-2"></i> +254710135765</a>
+                                    <a href="" class="mb-3"><i class="fab fa-whatsapp me-2"></i> +254710135765</a>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-share fa-2x text-white me-2"></i>
+                                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                        <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fas fa-phone"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                            <h4 class="text-white mb-3">Payments</h4>
-                            <div class="footer-bank-card">
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
+                            <!-- <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="footer-item d-flex flex-column">
+                                    <h4 class="mb-4 text-white">Company</h4>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                                </div>
+                            </div> -->
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item d-flex flex-column">
+                                    <h4 class="mb-4 text-white">Useful Links</h4>
+                                    <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                                    <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                                    <a href="shop-to-let.html"><i class="fas fa-angle-right me-2"></i> Shops To Let</a>
+                                    <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+                            <div class="col-md-6 col-lg-12 col-xl-4">
+                                <div class="footer-item">
+                                    <div class="row gy-3 gx-2 mb-4 footer-cta">
+                                        <h5 class="text-white mb-3"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z"/></svg> <span> Stay up to date with the latest from OSA</h5>
         
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright text-body py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-start">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-                    </div>
+                                        <div class="input-box">
+                                            <input class="input" type="text" placeholder="Enter your email address">
+                                            <span class="input-border"></span>
+                                        </div>
+        
+                                        <button class="cta-btn">Sign Up</button>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
+        <!-- Footer End -->
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
@@ -475,6 +235,7 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/mod.js"></script>
     </body>
 
 </html>

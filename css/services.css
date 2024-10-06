@@ -1,0 +1,241 @@
+.hero{
+    width: 100%;
+    /* height: 95vh; */
+    position: relative;
+    /* max-height: 900px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    padding: 50px 80px;
+    max-width: 1600px;
+    margin: 40px auto;
+
+    /* background: linear-gradient(90deg, rgba(203,45,62,1) 19%, rgba(239,71,58,1) 77%, rgba(239,71,58,1) 91%); */
+
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgb(255, 0, 0);
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    
+}
+
+.hero-text{
+    color: black;
+   
+}
+
+.hero-text h1{
+    font-size: 55px;
+
+}
+
+
+.hero .hero-bg{
+    width: 100%;
+    /* height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover; */
+    background: transparent;
+    max-width: 650px;
+    min-width: 450px;
+    margin: auto;
+}
+
+.pattern-hero-bg{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    max-height: 100px;
+    height: 100px;
+    z-index: 3;
+}
+
+.contact-btn {
+    width: 150px;
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    font-size: 16px;
+    font-weight: 500;
+    color:var(--bs-red);
+    border: 1px solid var(--bs-red);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    border-radius: 100000px;
+}
+
+.contact-btn:hover{
+    color: white;
+}
+
+.contact-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-red);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.contact-btn:hover::before {
+    transform: translateX(0);
+}
+
+.hero-curve{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.services-text{
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto;
+    margin-top: 85px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.services-text p{
+    font-size: 13px;
+}
+.services-text .highlight{
+    color: white;
+    margin: 0;
+    padding: 0px 20px;
+    background: linear-gradient(90deg, rgba(203,45,62,1) 19%, rgba(239,71,58,1) 77%, rgba(239,71,58,1) 91%);
+}
+
+.service-badge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    border-radius: 1000px;
+    height: fit-content;
+    padding: 2px 20px;
+}
+
+.service-badge h2{
+    margin: 0;
+}
+
+.service-cards{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+.service-cards .card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-width: 250px;
+    padding: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.136);
+    cursor: pointer;
+
+}
+
+.service-cards .card svg{
+    fill: var(--bs-red);
+}
+
+.cards-title h1{
+    color: var(--bs-primary);
+}
+
+.service-cards .card svg{
+    height: 45px;
+    width: 45px;
+}
+
+.service-cards .card:hover h4,
+.service-cards .card:hover p{
+    color: white;
+}
+
+.service-cards .card:hover{
+    background-color: var(--bs-red);
+    transform: translateY(-5px);
+}
+.service-cards .card:hover svg{
+    fill: white;
+}
+
+@media (max-width: 810px) {
+
+    .hero .hero-bg{
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hero{
+        padding: 50px ;
+    }
+
+    
+    
+}
+
+@media (max-width: 810px) {
+
+    .hero-text{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-text h1{
+        font-size: 35px;
+    }
+
+    
+    
+}

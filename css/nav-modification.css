@@ -699,11 +699,10 @@ nav{
 
 
 @media(max-width: 450px){
-    .Hero-pattern{
-        & img{
-            height: 50px;
-        }
+    .Hero-pattern img{
+        height: 50px;
     }
+    
     #navbar{
         padding: 5px 20px;
     }
