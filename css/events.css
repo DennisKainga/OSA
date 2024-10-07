@@ -2,11 +2,19 @@
     --card-width: 0px;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 .events-container{
     width: 100%;
     max-width: 1340px;
     padding: 0px 20px;
     margin: 50px auto;
+    flex: 1;
 }
 
 .events-container h1{
