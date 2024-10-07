@@ -594,7 +594,7 @@ color: var(--bs-white);
     }
     
     .collapsable-nav.show{
-        height: 269px;
+        height: 380px;
     }
 
     .navbar-links{
