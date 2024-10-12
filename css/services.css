@@ -1,10 +1,20 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: fit-content;
+}
+.main-content{
+    flex: 1;
+}
+
 .hero{
     width: 100%;
     /* height: 95vh; */
     position: relative;
     /* max-height: 900px; */
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     gap: 40px;
     align-items: center;
@@ -53,14 +63,7 @@
 
 .hero .hero-bg{
     width: 100%;
-    /* height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    object-fit: cover; */
     background: transparent;
-    max-width: 650px;
-    min-width: 450px;
     margin: auto;
 }
 
@@ -119,6 +122,11 @@
     vertical-align: middle;
 }
 
+.full-bleed{
+    background-color: rgba(255, 0, 0, 0.059);
+    padding: 50px 0px;
+}
+
 .services-text{
     text-align: center;
     max-width: 500px;
@@ -157,15 +165,15 @@
 }
 
 .service-cards{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr); 
     justify-content: center;
-    align-items: center;
     max-width: 1100px;
     margin: auto;
     margin-bottom: 100px;
     gap: 20px;
+    padding: 0px 20px;
 }
 
 .service-cards .card{
@@ -175,14 +183,47 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     min-width: 250px;
-    padding: 20px;
     border: none;
     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.136);
     cursor: pointer;
+    overflow: hidden;
+    height: fit-content;
 
 }
+
+.service-cards .card .card-upper{
+    padding: 20px;
+}
+
+.service-cards .card p{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+
+}
+
+.service-cards .card .extra{
+    display: none;
+}
+
+.service-cards .card.active .extra,
+.service-cards .card.active p{
+    display: -webkit-box;
+    -webkit-line-clamp: unset; 
+}
+
+.service-cards .card button{
+    width: 100%;
+    background-color: var(--bs-red);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
 
 .service-cards .card svg{
     fill: var(--bs-red);
@@ -202,30 +243,102 @@
     color: white;
 }
 
+.service-cards .card.active:hover h4,
+.service-cards .card.active:hover p{
+    color: black;
+}
+
+.service-cards .card:hover button{
+    background-color: white;
+    color: black;
+}
+
+.service-cards .card.active:hover button{
+    background-color: var(--bs-primary);
+    color: white;
+}
+
 .service-cards .card:hover{
     background-color: var(--bs-red);
     transform: translateY(-5px);
 }
+
+.service-cards .card.active:hover{
+    background-color: white;
+}
+
+.service-cards .card.active:hover svg{
+    fill: var(--bs-red);
+}
+
 .service-cards .card:hover svg{
     fill: white;
 }
 
+.about-third{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+
+.about-third img{
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    margin-top: -100px;
+    object-fit: contain;
+    
+    
+}
+
+.about-third .ts-bottom{
+    margin: 85px 0px;
+    padding: 20px 40px;
+    box-shadow: 0px 2px 7px 4px rgba(0, 0, 0, 0.116);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: calc(100% - 20px);
+    max-width: 850px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-third .ts-bottom .tsb-left{
+    max-width: 60%;
+    min-width: 350px;
+    margin: auto;
+}
+.about-third .ts-bottom .tsb-right{
+    margin: auto;
+}
+
 @media (max-width: 810px) {
+
+    .service-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
 
     .hero .hero-bg{
         min-width: 0;
         width: 100%;
     }
 
+    
     .hero{
         padding: 50px ;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
-
-    
-    
-}
-
-@media (max-width: 810px) {
 
     .hero-text{
         align-items: center;
@@ -238,4 +351,30 @@
 
     
     
+}
+
+@media (max-width: 600px){
+
+
+    
+    .service-cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media (max-width: 450px){
+
+    .hero{
+        padding: 50px 10px ;
+    }
+   
+
+    .about-third .ts-bottom .tsb-left{
+        min-width: 100%;
+    }
+    .about-third .ts-bottom .tsb-right{
+        margin: auto;
+    }
 }
