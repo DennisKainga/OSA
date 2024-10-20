@@ -225,7 +225,8 @@ body{
 }
 
 
-.service-cards .card svg{
+.service-cards .card svg,
+.service-cards .card svg g path{
     fill: var(--bs-red);
 }
 
@@ -241,6 +242,10 @@ body{
 .service-cards .card:hover h4,
 .service-cards .card:hover p{
     color: white;
+}
+
+.service-cards .card h4{
+    margin-top: 10px;
 }
 
 .service-cards .card.active:hover h4,
@@ -267,11 +272,13 @@ body{
     background-color: white;
 }
 
-.service-cards .card.active:hover svg{
+.service-cards .card.active:hover svg,
+.service-cards .card.active:hover svg g path{
     fill: var(--bs-red);
 }
 
-.service-cards .card:hover svg{
+.service-cards .card:hover svg,
+.service-cards .card:hover svg g path{
     fill: white;
 }
 
