@@ -190,6 +190,7 @@ body{
     cursor: pointer;
     overflow: hidden;
     height: fit-content;
+    position: relative;
 
 }
 
@@ -247,6 +248,7 @@ body{
 .service-cards .card h4{
     margin-top: 10px;
 }
+
 
 .service-cards .card.active:hover h4,
 .service-cards .card.active:hover p{
