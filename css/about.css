@@ -1,3 +1,7 @@
+body.demo-showing{
+    overflow-y: hidden;
+}
+
 .hero-section{
     width: 100%;
     height: calc(100vh - 70px);
@@ -343,6 +347,310 @@
     animation: none;    
 }
 
+.overlay-clickspot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.262);
+
+}
+
+.mall-demo-full-bleed.show{
+    display: flex;
+}
+
+.mall-demo-full-bleed{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.262);
+    z-index: 100000;
+}
+
+
+
+.mall-demo-container{
+    width: 100%;
+    max-width: 1000px;
+    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+.actions-container{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.336);
+}
+
+.actions-container svg{
+    fill: var(--bs-white);
+}
+
+.actions-container .close{
+    cursor: pointer;
+}
+
+.mall-demo{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadein 250ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+
+}
+
+.mall-demo.hidden{
+    display: none;
+    animation: none;
+
+}
+
+.mall-demo img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.mall-demo-inner{
+    overflow-y: scroll;
+    width: calc(100% - 40px);
+    margin: auto;
+    border-radius: 6px;
+    max-height: calc(100vh - 200px);
+    padding: 0px 30px;
+    padding-bottom: 0px;
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.381);
+    transform: translateY(-80px);
+    background-color: white;
+
+
+}
+
+
+
+.mall-demo-inner h1{
+    padding: 20px 0px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    font-style: italic;
+    color: var(--bs-red);
+    font-weight: 600;
+    
+}
+
+.mall-demo-inner h1::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--bs-red);
+    left: 0;
+    bottom: 0px;
+}
+
+.mall-demo-inner .date{
+    color: var(--bs-dark);
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px 0;
+    
+}
+
+.mall-demo-inner .date span{
+    color: var(--bs-primary);
+}
+
+.mall-demo-inner .description{
+    font-size: 17px;
+    max-width: 80%;
+    padding-left: 10px;
+}
+
+.mall-demo-inner .description span{
+    color: var(--bs-dark);
+    font-weight: 600;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.our-people{
+    width: 100%;
+
+}
+
+.our-people .op-intro{
+    margin: auto;
+    width: fit-content;
+    max-width: 600px;
+    text-align: center;
+
+}
+
+.op-intro h1{
+    font-weight: 700;
+
+}
+
+.op-intro p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.team-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 70px auto;
+
+}
+
+.team-container .member{
+    width: 25%;
+    min-width: 300px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.member h3{
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.member img{
+    width: 100%;
+}
+
+.member .pfp{
+    width: 60%;
+}
+
+.member .li-img{
+    width: 40px;
+    height: 40px;
+    transition: transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border-radius: 100%;
+    margin-top: 10px;
+
+}
+
+.member .li-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 7px 10px 2px rgba(0, 0, 0, 0.316);
+
+}
+
+
+.about-third{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+
+.about-third img{
+    max-width: 750px;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    margin-top: -100px;
+    object-fit: contain;
+    
+    
+}
+
+.about-third .ts-bottom{
+    margin: 85px 0px;
+    padding: 20px 40px;
+    box-shadow: 0px 2px 7px 4px rgba(0, 0, 0, 0.116);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: calc(100% - 20px);
+    max-width: 850px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-third .ts-bottom .tsb-left{
+    max-width: 60%;
+    min-width: 350px;
+    margin: auto;
+}
+.about-third .ts-bottom .tsb-right{
+    margin: auto;
+}
+
+.contact-btn {
+    width: 150px;
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    font-size: 16px;
+    font-weight: 500;
+    color:var(--bs-red);
+    border: 1px solid var(--bs-red);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    border-radius: 100000px;
+}
+
+.contact-btn:hover{
+    color: white;
+}
+
+.contact-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-red);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.contact-btn:hover::before {
+    transform: translateX(0);
+}
+
 @keyframes fadein {
     0%{
         transform: translateY(80px);
@@ -467,6 +775,12 @@
 
     }
 
+    .mall-demo-inner .description{
+        font-size: 17px;
+        max-width: 95%;
+        padding-left: 10px;
+    }
+
 
     
 
@@ -476,6 +790,34 @@
     .hero-words{
         padding: 10px 10px;
         width: calc(100% - 20px);
+    }
+
+    .alternative-title{
+        font-size: 40px;
+    }
+
+    .full-bleed.our-properties{
+        padding: 0px 5px;
+    }
+
+    .full-bleed.our-properties .splide__arrow--prev{
+        left: 0em;
+    }
+    
+    .full-bleed.our-properties .splide__arrow--next{
+        right: 0em;
+    }
+
+    .full-bleed.our-properties .right-side-info{
+        padding: 10px 15px;
+    }
+
+    .full-bleed.our-properties .right-side-info .mt{
+        font-size: 35px;
+    }
+
+    .team-container .member{
+        min-width: 250px;
     }
 
     .full-bleed.business{
@@ -503,5 +845,24 @@
         margin: auto;
     }
 
+    .mall-demo-inner{
+        padding: 0px 10px;
+    }
+
+    .mall-demo-inner h1{
+        font-size: 23px;
+    }
+
+    .about-third .ts-bottom{
+        padding: 20px 20px;
+        width: calc(100% - 40px);
+    }
+
+    .about-third .ts-bottom .tsb-left{
+        min-width: 100%;
+    }
+    .about-third .ts-bottom .tsb-right{
+        margin: auto;
+    }
     
 }
